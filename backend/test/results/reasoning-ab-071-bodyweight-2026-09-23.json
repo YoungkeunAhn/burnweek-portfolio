@@ -1,0 +1,214 @@
+{
+  "generated_at": "2026-09-23T14:20:18.389Z",
+  "provider": "minimax",
+  "model": "MiniMax-M3",
+  "repetitions": 1,
+  "pair_concurrency": 1,
+  "max_completion_tokens_both_arms": null,
+  "quality_note": "hard_pass is mandatory; quality_score is a deterministic 5-part structural rubric, not a guarantee of physiological outcomes",
+  "summary": {
+    "adaptive": {
+      "runs": 1,
+      "ok": 1,
+      "hard_pass": 1,
+      "hard_violations": 0,
+      "repair_runs": 1,
+      "average_llm_calls": 3,
+      "elapsed_ms": {
+        "p50": 146023,
+        "p90": 146023,
+        "max": 146023
+      },
+      "total_tokens": {
+        "p50": 41040,
+        "p90": 41040
+      },
+      "average_quality_score": 100
+    },
+    "disabled": {
+      "runs": 1,
+      "ok": 1,
+      "hard_pass": 1,
+      "hard_violations": 0,
+      "repair_runs": 0,
+      "average_llm_calls": 1,
+      "elapsed_ms": {
+        "p50": 2235,
+        "p90": 2235,
+        "max": 2235
+      },
+      "total_tokens": {
+        "p50": 2879,
+        "p90": 2879
+      },
+      "average_quality_score": 93.3
+    },
+    "paired": {
+      "pairs": 1,
+      "disabled_faster": 1,
+      "median_elapsed_delta_ms_disabled_minus_adaptive": -143788,
+      "average_quality_delta_disabled_minus_adaptive": -6.7,
+      "average_final_exercise_jaccard": 0.25
+    }
+  },
+  "results": [
+    {
+      "profile_id": "beginner-bodyweight-only",
+      "repetition": 1,
+      "mode": "adaptive",
+      "elapsed_ms": 146023,
+      "status": "ok",
+      "llm_calls": 3,
+      "total_tokens": 41040,
+      "attempts": [
+        {
+          "elapsed_ms": 33313,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2347,
+          "completion_tokens": 8799,
+          "total_tokens": 11146
+        },
+        {
+          "elapsed_ms": 40655,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2439,
+          "completion_tokens": 8797,
+          "total_tokens": 11236
+        },
+        {
+          "elapsed_ms": 72044,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2438,
+          "completion_tokens": 16220,
+          "total_tokens": 18658
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "bodyweight_squat",
+          "chin_up",
+          "incline_push_up",
+          "3_4_sit_up"
+        ],
+        [
+          "pullups",
+          "natural_glute_ham_raise",
+          "push_up_wide",
+          "body_tricep_press"
+        ],
+        [
+          "step_up_with_knee_raise",
+          "wide_grip_rear_pull_up",
+          "push_ups_close_triceps_position",
+          "bench_dips"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "bodyweight_squat",
+          "chin_up",
+          "incline_push_up",
+          "3_4_sit_up"
+        ],
+        [
+          "pullups",
+          "natural_glute_ham_raise",
+          "push_up_wide",
+          "body_tricep_press"
+        ],
+        [
+          "step_up_with_knee_raise",
+          "wide_grip_rear_pull_up",
+          "push_ups_close_triceps_position",
+          "bench_dips"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-bodyweight-only",
+      "repetition": 1,
+      "mode": "disabled",
+      "elapsed_ms": 2235,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 2879,
+      "attempts": [
+        {
+          "elapsed_ms": 2228,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2334,
+          "completion_tokens": 545,
+          "total_tokens": 2879
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 93.3,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 0.667,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "push_ups_with_feet_elevated",
+          "bodyweight_squat",
+          "incline_push_up_wide",
+          "bottoms_up",
+          "single_leg_glute_bridge"
+        ],
+        [
+          "close_grip_push_up_off_of_a_dumbbell",
+          "single_leg_glute_bridge",
+          "incline_push_up",
+          "bent_knee_hip_raise",
+          "body_tricep_press"
+        ],
+        [
+          "push_ups_with_feet_elevated",
+          "bodyweight_squat",
+          "incline_push_up_medium",
+          "natural_glute_ham_raise",
+          "3_4_sit_up",
+          "glute_kickback"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "push_ups_with_feet_elevated",
+          "bodyweight_squat",
+          "incline_push_up_wide",
+          "bottoms_up",
+          "single_leg_glute_bridge"
+        ],
+        [
+          "close_grip_push_up_off_of_a_dumbbell",
+          "single_leg_glute_bridge",
+          "incline_push_up",
+          "bent_knee_hip_raise",
+          "body_tricep_press"
+        ],
+        [
+          "push_ups_with_feet_elevated",
+          "bodyweight_squat",
+          "incline_push_up_medium",
+          "natural_glute_ham_raise",
+          "3_4_sit_up",
+          "glute_kickback"
+        ]
+      ]
+    }
+  ]
+}

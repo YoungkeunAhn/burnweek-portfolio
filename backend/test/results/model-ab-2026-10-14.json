@@ -1,0 +1,271 @@
+{
+  "date": "2026-10-14",
+  "note": "A = 후보(P0), B = MiniMax-M3 녹화본. 심판은 후보와 다른 두 계열, 순서 교차, 둘 다 같을 때만 승패. 지연은 CLI 기동 포함.",
+  "candidates": {
+    "claude": {
+      "family": "claude",
+      "model": "claude-haiku-5-5"
+    },
+    "codex": {
+      "family": "codex",
+      "model": "default@low"
+    },
+    "agy": {
+      "family": "agy",
+      "model": "gemini-3.8-flash-low"
+    }
+  },
+  "judges": {
+    "claude": {
+      "family": "claude",
+      "model": "claude-sonnet-5-5"
+    },
+    "codex": {
+      "family": "codex",
+      "model": "default@medium"
+    },
+    "agy": {
+      "family": "agy",
+      "model": "gemini-3.8-flash-high"
+    }
+  },
+  "byModel": {
+    "minimax:golden(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 0,
+      "latency_ms_p50": 89547,
+      "latency_ms_p90": 141619,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.11,
+      "push_pull_mean": 1.37,
+      "exercises_mean": 18.75,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    },
+    "claude:claude-haiku-5-5:p0": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 1,
+      "latency_ms_p50": 23902,
+      "latency_ms_p90": 27958,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.19,
+      "push_pull_mean": 1.43,
+      "exercises_mean": 13.25,
+      "glute_focus_glute_sets": 12,
+      "week4_continuity": 1
+    },
+    "claude:p0(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 1,
+      "latency_ms_p50": 23916,
+      "latency_ms_p90": 27453,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.13,
+      "push_pull_mean": 1.41,
+      "exercises_mean": 13.42,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    },
+    "claude:claude-haiku-5-5:p0_table": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 21551,
+      "latency_ms_p90": 28997,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.17,
+      "push_pull_mean": 1.53,
+      "exercises_mean": 13.38,
+      "glute_focus_glute_sets": 16,
+      "week4_continuity": 1
+    },
+    "claude:p0_table(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 0,
+      "latency_ms_p50": 22120,
+      "latency_ms_p90": 28997,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.14,
+      "push_pull_mean": 1.46,
+      "exercises_mean": 13.58,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    },
+    "codex:default@low:p0": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 23112,
+      "latency_ms_p90": 33506,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.2,
+      "push_pull_mean": 1.41,
+      "exercises_mean": 13.31,
+      "glute_focus_glute_sets": 16,
+      "week4_continuity": 1
+    },
+    "codex:p0(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 0,
+      "latency_ms_p50": 24956,
+      "latency_ms_p90": 33506,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.17,
+      "push_pull_mean": 1.4,
+      "exercises_mean": 13.5,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    },
+    "codex:default@low:p0_table": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 22449,
+      "latency_ms_p90": 34570,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.16,
+      "push_pull_mean": 1.42,
+      "exercises_mean": 13.25,
+      "glute_focus_glute_sets": 20,
+      "week4_continuity": 1
+    },
+    "codex:p0_table(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 0,
+      "latency_ms_p50": 22449,
+      "latency_ms_p90": 32583,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.11,
+      "push_pull_mean": 1.42,
+      "exercises_mean": 13.5,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    },
+    "agy:gemini-3.8-flash-low:p0": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 12182,
+      "latency_ms_p90": 84765,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.21,
+      "push_pull_mean": 1.58,
+      "exercises_mean": 13.31,
+      "glute_focus_glute_sets": 16,
+      "week4_continuity": 1
+    },
+    "agy:p0(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 0,
+      "latency_ms_p50": 12362,
+      "latency_ms_p90": 21052,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.16,
+      "push_pull_mean": 1.55,
+      "exercises_mean": 13.5,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    },
+    "agy:gemini-3.8-flash-low:p0_table": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 12073,
+      "latency_ms_p90": 49286,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.2,
+      "push_pull_mean": 1.58,
+      "exercises_mean": 13.31,
+      "glute_focus_glute_sets": 14,
+      "week4_continuity": 1
+    },
+    "agy:p0_table(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 0,
+      "latency_ms_p50": 13515,
+      "latency_ms_p90": 49286,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.15,
+      "push_pull_mean": 1.44,
+      "exercises_mean": 13.5,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    }
+  },
+  "judgeTally": {
+    "claude": {
+      "A": 3,
+      "B": 0,
+      "tie": 3,
+      "votes": {
+        "beginner-3day-cardio-none": "codex:AA agy:BB",
+        "beginner-4day-upperlower": "codex:AA agy:AA",
+        "beginner-bodyweight-only": "codex:BA agy:BB",
+        "beginner-home-gym-dumbbells": "codex:AA agy:AA",
+        "beginner-minimal-shoulder-injury": "codex:Atie agy:AA",
+        "week2-progression-pain": "codex:AA agy:AA"
+      }
+    },
+    "codex": {
+      "A": 1,
+      "B": 1,
+      "tie": 4,
+      "votes": {
+        "beginner-3day-cardio-none": "claude:BB agy:BB",
+        "beginner-4day-upperlower": "claude:AA agy:AA",
+        "beginner-bodyweight-only": "claude:AB agy:AA",
+        "beginner-home-gym-dumbbells": "claude:BB agy:AA",
+        "beginner-minimal-shoulder-injury": "claude:AB agy:AA",
+        "week2-progression-pain": "claude:BB agy:AB"
+      }
+    },
+    "agy": {
+      "A": 1,
+      "B": 0,
+      "tie": 5,
+      "votes": {
+        "beginner-3day-cardio-none": "claude:BB codex:AA",
+        "beginner-4day-upperlower": "claude:AA codex:AA",
+        "beginner-bodyweight-only": "claude:BB codex:AB",
+        "beginner-home-gym-dumbbells": "claude:BB codex:AA",
+        "beginner-minimal-shoulder-injury": "claude:AB codex:tietie",
+        "week2-progression-pain": "claude:AB codex:AA"
+      }
+    }
+  },
+  "retries": {}
+}

@@ -1,0 +1,272 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PerformedSession v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "session_id",
+    "plan_id",
+    "date",
+    "day_index",
+    "completion",
+    "exercises"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "plan_id": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "day_index": {
+      "type": "integer"
+    },
+    "completion": {
+      "type": "string",
+      "enum": [
+        "completed",
+        "partial",
+        "skipped"
+      ]
+    },
+    "completion_pct": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "session_note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "exercises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "exercise_id",
+          "modality",
+          "sets"
+        ],
+        "properties": {
+          "exercise_id": {
+            "type": "string"
+          },
+          "modality": {
+            "type": "string",
+            "enum": [
+              "strength",
+              "cardio",
+              "bodyweight"
+            ]
+          },
+          "sets": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "set_number",
+                "set_kind"
+              ],
+              "properties": {
+                "set_number": {
+                  "type": "integer"
+                },
+                "set_kind": {
+                  "type": "string",
+                  "enum": [
+                    "warmup",
+                    "working"
+                  ],
+                  "default": "working"
+                },
+                "actual_reps": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "actual_load_kg": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 500
+                },
+                "failed": {
+                  "type": "boolean"
+                },
+                "pain_flag": {
+                  "type": "boolean"
+                },
+                "actual_seconds": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cardio": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "modality",
+                    "duration_min"
+                  ],
+                  "properties": {
+                    "modality": {
+                      "type": "string",
+                      "enum": [
+                        "cycling",
+                        "rowing",
+                        "elliptical",
+                        "incline_walk",
+                        "running",
+                        "stairs"
+                      ]
+                    },
+                    "style": {
+                      "type": "string",
+                      "enum": [
+                        "LISS",
+                        "HIIT"
+                      ]
+                    },
+                    "duration_min": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "duration_sec": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 59
+                    },
+                    "distance_m": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "incline_pct": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "level": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    },
+                    "segments": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "sec"
+                        ],
+                        "properties": {
+                          "label": {
+                            "type": "string"
+                          },
+                          "sec": {
+                            "type": "integer"
+                          },
+                          "speed_kmh": {
+                            "type": "number"
+                          },
+                          "incline_pct": {
+                            "type": "number"
+                          },
+                          "level": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "oneOf": [
+                {
+                  "required": [
+                    "actual_reps",
+                    "actual_load_kg"
+                  ],
+                  "not": {
+                    "anyOf": [
+                      {
+                        "required": [
+                          "cardio"
+                        ]
+                      },
+                      {
+                        "required": [
+                          "actual_seconds"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "required": [
+                    "cardio"
+                  ],
+                  "not": {
+                    "anyOf": [
+                      {
+                        "required": [
+                          "actual_reps"
+                        ]
+                      },
+                      {
+                        "required": [
+                          "actual_load_kg"
+                        ]
+                      },
+                      {
+                        "required": [
+                          "actual_seconds"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "required": [
+                    "actual_seconds"
+                  ],
+                  "not": {
+                    "anyOf": [
+                      {
+                        "required": [
+                          "actual_reps"
+                        ]
+                      },
+                      {
+                        "required": [
+                          "actual_load_kg"
+                        ]
+                      },
+                      {
+                        "required": [
+                          "cardio"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

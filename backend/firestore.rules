@@ -1,0 +1,21 @@
+rules_version = '2';
+
+// 이 프로젝트의 Firestore는 **백엔드 전용**이다.
+//
+// 컬렉션은 셋뿐이고(`generation_jobs`, `rate_limits`, `weekly_plans/{uid}/weeks`) 전부 Cloud Functions가 Admin
+// SDK로만 만지며, Admin SDK는 규칙을 우회한다. 앱에는 `cloud_firestore` 의존성이 없다 —
+// 사용자 데이터(플랜·세션·체중)는 로컬 Drift → 사용자 Google Drive에 산다(INV-2/INV-5,
+// NFR-PRIV-1). 즉 클라이언트가 Firestore에 직접 접근할 정당한 경로가 하나도 없다.
+//
+// 앱이 google-services.json을 갖게 된 이상 클라이언트 SDK로 접근 자체는 가능해졌으므로,
+// 열려 있으면 잡 문서(생성된 플랜 포함)가 그대로 읽힌다. 그래서 전면 거부한다.
+// `weekly_plans`(D19: 미니앱 플랜 정본)도 같다 — 미니앱은 Firestore SDK가 아니라
+// 우리 HTTP API로만 읽고, 그 경로가 토큰 uid로 소유자를 확인한다(`plansGet`).
+// 앱이 Firestore를 직접 쓰게 되는 결정이 나오면(ADR/G4) 그때 컬렉션별로 연다.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

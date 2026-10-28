@@ -1,0 +1,574 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WeeklyPlan v1 (final, code-produced)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "plan_meta",
+    "week",
+    "progression",
+    "safety"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "plan_meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "plan_id",
+        "user_id",
+        "week_start_date",
+        "week_number",
+        "goal",
+        "experience_level",
+        "split_type",
+        "days_per_week",
+        "disclaimer"
+      ],
+      "properties": {
+        "plan_id": {
+          "type": "string"
+        },
+        "user_id": {
+          "type": "string"
+        },
+        "week_start_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "week_number": {
+          "type": "integer"
+        },
+        "goal": {
+          "description": "대표 목표 = goals[0]. 동결된 Flutter 앱·기존 요약 픽스처 호환용",
+          "type": "string",
+          "enum": [
+            "build_muscle",
+            "gain_strength",
+            "lose_fat",
+            "endurance",
+            "mobility",
+            "general_fitness"
+          ]
+        },
+        "goals": {
+          "description": "온보딩에서 고른 목표 전체(1–3개)",
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "enum": [
+              "build_muscle",
+              "gain_strength",
+              "lose_fat",
+              "endurance",
+              "mobility",
+              "general_fitness"
+            ]
+          }
+        },
+        "experience_level": {
+          "type": "string",
+          "enum": [
+            "beginner",
+            "novice_intermediate"
+          ]
+        },
+        "split_type": {
+          "type": "string",
+          "enum": [
+            "full_body",
+            "upper_lower",
+            "push_pull_legs",
+            "body_part_3",
+            "body_part_4",
+            "body_part_5"
+          ]
+        },
+        "days_per_week": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 6
+        },
+        "generated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "ai",
+            "manual"
+          ],
+          "description": "누가 만든 주인가(D54 ①). 생성 ai · 빈 주 manual · 편집은 저장된 값 그대로. 선택 — 이 필드 전의 문서에는 없고, 화면은 ai 일 때만 AI 표기를 붙인다"
+        },
+        "preset_summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "플랜 상단 한 줄 — 확장이 끝난 주의 실제 구성에서 코드가 조립(D55 ⑤). 선택. 예: 입문 플랜 · 하체 중점 · 머신·덤벨 위주 · 빈 바에서 시작"
+        },
+        "disclaimer": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "week": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "day_index",
+          "session_type",
+          "focus",
+          "exercises"
+        ],
+        "properties": {
+          "day_index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 6
+          },
+          "session_type": {
+            "type": "string",
+            "enum": [
+              "lift",
+              "lift_plus_cardio",
+              "cardio_only",
+              "rest"
+            ]
+          },
+          "focus": {
+            "type": "string"
+          },
+          "est_duration_min": {
+            "type": "integer"
+          },
+          "warmup_note": {
+            "type": "string"
+          },
+          "exercises": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "exercise_id",
+                "name",
+                "modality",
+                "order"
+              ],
+              "allOf": [
+                {
+                  "if": {
+                    "required": [
+                      "modality"
+                    ],
+                    "properties": {
+                      "modality": {
+                        "const": "cardio"
+                      }
+                    }
+                  },
+                  "then": {
+                    "required": [
+                      "cardio_detail"
+                    ],
+                    "not": {
+                      "required": [
+                        "sets"
+                      ]
+                    }
+                  },
+                  "else": {
+                    "required": [
+                      "sets"
+                    ],
+                    "not": {
+                      "required": [
+                        "cardio_detail"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "if": {
+                    "required": [
+                      "circuit"
+                    ],
+                    "properties": {
+                      "circuit": {
+                        "properties": {
+                          "format": {
+                            "const": "A"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "sets": {
+                        "items": {
+                          "required": [
+                            "target_seconds"
+                          ],
+                          "not": {
+                            "anyOf": [
+                              {
+                                "required": [
+                                  "target_reps_low"
+                                ]
+                              },
+                              {
+                                "required": [
+                                  "target_reps_high"
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "else": {
+                    "properties": {
+                      "sets": {
+                        "items": {
+                          "required": [
+                            "target_reps_low",
+                            "target_reps_high"
+                          ],
+                          "not": {
+                            "required": [
+                              "target_seconds"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "properties": {
+                "exercise_id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "modality": {
+                  "type": "string",
+                  "enum": [
+                    "strength",
+                    "cardio",
+                    "bodyweight"
+                  ]
+                },
+                "primary_muscles": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "order": {
+                  "type": "integer"
+                },
+                "rest_seconds": {
+                  "type": "integer"
+                },
+                "progression_method": {
+                  "type": "string",
+                  "enum": [
+                    "double_progression",
+                    "none"
+                  ]
+                },
+                "progression_decision": {
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "additionalProperties": false,
+                  "description": "2주차+ : 직전 로그 기반 결정 근거 (FR-FB-1/3)",
+                  "required": [
+                    "decision",
+                    "reason_code"
+                  ],
+                  "properties": {
+                    "decision": {
+                      "type": "string",
+                      "enum": [
+                        "increase",
+                        "hold",
+                        "decrease",
+                        "substitute"
+                      ]
+                    },
+                    "reason_code": {
+                      "type": "string",
+                      "enum": [
+                        "hit_top_reps",
+                        "reps_in_progress",
+                        "missed_reps",
+                        "pain_flag",
+                        "first_week",
+                        "user_edit",
+                        "goal_no_overload",
+                        "history_gap"
+                      ]
+                    },
+                    "source_date": { "type": "string", "format": "date" },
+                    "from_load_kg": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "to_load_kg": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                "substitution_options": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "coaching_cue": {
+                  "type": "string"
+                },
+                "circuit": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "맨몸 서킷 묶음(D102). 같은 id 의 운동이 한 서킷이다. A=시간 연속 · B=횟수 라운드 · C=운동별 세트",
+                  "required": [
+                    "id",
+                    "format",
+                    "rounds",
+                    "name",
+                    "source_url"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "format": {
+                      "type": "string",
+                      "enum": [
+                        "A",
+                        "B",
+                        "C"
+                      ]
+                    },
+                    "rounds": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "source_url": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "sets": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "set_number",
+                      "set_kind"
+                    ],
+                    "properties": {
+                      "set_number": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "set_kind": {
+                        "type": "string",
+                        "enum": [
+                          "warmup",
+                          "working"
+                        ]
+                      },
+                      "target_reps_low": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "target_reps_high": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "target_seconds": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "target_load_kg": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "minimum": 0
+                      },
+                      "target_load_pct_1rm": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "cardio_detail": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "modality",
+                    "style",
+                    "duration_min",
+                    "intensity_zone",
+                    "placement"
+                  ],
+                  "properties": {
+                    "modality": {
+                      "type": "string",
+                      "enum": [
+                        "cycling",
+                        "rowing",
+                        "elliptical",
+                        "incline_walk",
+                        "running",
+                        "stairs"
+                      ]
+                    },
+                    "style": {
+                      "type": "string",
+                      "enum": [
+                        "LISS",
+                        "HIIT"
+                      ]
+                    },
+                    "duration_min": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "intensity_zone": {
+                      "type": "string"
+                    },
+                    "placement": {
+                      "type": "string",
+                      "enum": [
+                        "after_lifting",
+                        "separate_session",
+                        "rest_day"
+                      ]
+                    },
+                    "distance_m": {
+                      "type": "number"
+                    },
+                    "incline_pct": {
+                      "type": "number"
+                    },
+                    "level": {
+                      "type": "integer"
+                    },
+                    "segments": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "sec"
+                        ],
+                        "properties": {
+                          "label": {
+                            "type": "string"
+                          },
+                          "sec": {
+                            "type": "integer"
+                          },
+                          "speed_kmh": {
+                            "type": "number"
+                          },
+                          "incline_pct": {
+                            "type": "number"
+                          },
+                          "level": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "progression": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "load_increment_upper_kg",
+        "load_increment_lower_kg",
+        "advance_rule"
+      ],
+      "properties": {
+        "method": {
+          "const": "double_progression"
+        },
+        "load_increment_upper_kg": {
+          "type": "number"
+        },
+        "load_increment_lower_kg": {
+          "type": "number"
+        },
+        "advance_rule": {
+          "type": "string"
+        }
+      }
+    },
+    "safety": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "disclaimer",
+        "excluded_exercise_ids",
+        "weekly_volume_caps"
+      ],
+      "properties": {
+        "disclaimer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "excluded_exercise_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "weekly_volume_caps": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

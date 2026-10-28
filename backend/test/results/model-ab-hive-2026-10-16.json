@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-16",
+  "note": "Hive 두 모델 × 운영 라우팅(auto: 헬스장 p1 · 그 밖 p0). judgeTally `a_vs_b` 에서 A=a 승 · B=b 승. 심판 codex·agy, 순서 교차, 둘 다 같을 때만 승패. 기준선 claude haiku 는 2차(2026-10-15) 원자료. 지연은 Hive API 왕복(CLI 기동 없음)이라 2차 CLI 지연과 직접 비교하지 않는다.",
+  "judges": {
+    "codex": {
+      "family": "codex",
+      "model": "default@medium"
+    },
+    "agy": {
+      "family": "agy",
+      "model": "gemini-3.8-flash-high"
+    }
+  },
+  "byModel": {
+    "hive:deepseek-ai/deepseek-v4.1-flash:auto": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 15709,
+      "latency_ms_p90": 24614,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.34,
+      "push_pull_mean": 0.98,
+      "exercises_mean": 17.94,
+      "glute_focus_glute_sets": 22,
+      "week4_continuity": 1,
+      "llm_calls": 16,
+      "tokens_per_call_mean": 6973,
+      "reasoning_tokens_per_call_mean": 1992,
+      "failures": []
+    },
+    "hive:zai-org/glm-5.3-flash:auto": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 22349,
+      "latency_ms_p90": 42083,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.37,
+      "push_pull_mean": 0.94,
+      "exercises_mean": 18,
+      "glute_focus_glute_sets": 22,
+      "week4_continuity": 1,
+      "llm_calls": 16,
+      "tokens_per_call_mean": 10491,
+      "reasoning_tokens_per_call_mean": 5342,
+      "failures": []
+    },
+    "claude:claude-haiku-5-5:auto(2차)": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 19638,
+      "latency_ms_p90": 23542,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.37,
+      "push_pull_mean": 0.98,
+      "exercises_mean": 18,
+      "glute_focus_glute_sets": 22,
+      "week4_continuity": 1
+    }
+  },
+  "judgeTally": {
+    "deepseek_vs_claude": {
+      "A": 0,
+      "B": 1,
+      "tie": 5,
+      "votes": {
+        "beginner-3day-cardio-none": "codex:tietie agy:AA",
+        "beginner-4day-upperlower": "codex:tietie agy:BB",
+        "beginner-bodyweight-only": "codex:BB agy:BB",
+        "beginner-home-gym-dumbbells": "codex:AB agy:BB",
+        "beginner-minimal-shoulder-injury": "codex:tieB agy:BB",
+        "week2-progression-pain": "codex:tietie agy:BB"
+      }
+    },
+    "glm_vs_claude": {
+      "A": 2,
+      "B": 0,
+      "tie": 4,
+      "votes": {
+        "beginner-3day-cardio-none": "codex:tietie agy:tieA",
+        "beginner-4day-upperlower": "codex:tietie agy:BB",
+        "beginner-bodyweight-only": "codex:Atie agy:AA",
+        "beginner-home-gym-dumbbells": "codex:AA agy:AA",
+        "beginner-minimal-shoulder-injury": "codex:AA agy:AA",
+        "week2-progression-pain": "codex:AA agy:BB"
+      }
+    },
+    "deepseek_vs_glm": {
+      "A": 0,
+      "B": 4,
+      "tie": 2,
+      "votes": {
+        "beginner-3day-cardio-none": "codex:tietie agy:tietie",
+        "beginner-4day-upperlower": "codex:tietie agy:Atie",
+        "beginner-bodyweight-only": "codex:BB agy:BB",
+        "beginner-home-gym-dumbbells": "codex:BB agy:BB",
+        "beginner-minimal-shoulder-injury": "codex:BB agy:BB",
+        "week2-progression-pain": "codex:BB agy:BB"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SlotDraft (P1 LLM output)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["slots"],
+  "properties": {
+    "slots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["slot", "exercise_id", "reason"],
+        "properties": {
+          "slot": { "type": "string", "pattern": "^d[0-9]+s[0-9]+$" },
+          "exercise_id": { "type": "string" },
+          "reason": { "type": "string", "maxLength": 120, "description": "한 줄 이유. 숫자는 코드가 지운다(INV-1)" },
+          "alternatives": { "type": "array", "maxItems": 2, "items": { "type": "string" } }
+        }
+      }
+    },
+    "week_note": { "type": "string", "maxLength": 200 }
+  }
+}

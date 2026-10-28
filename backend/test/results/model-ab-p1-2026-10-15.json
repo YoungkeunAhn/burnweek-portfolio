@@ -1,0 +1,271 @@
+{
+  "date": "2026-10-15",
+  "note": "2차 실측(N9). judgeTally: `가족|p1_vs_p0` = 같은 모델 P1(A) 대 P0(B), 6 프로필. 심판은 후보와 다른 두 계열, 순서 교차, 둘 다 같을 때만 승패. P0·P1 모두 같은 날 같은 코드(역할별 렙·등 MEV 12·메인 3세트·N6 유산소·N7 서킷)로 생성. 지연은 CLI 기동 포함. MiniMax 행은 1차 녹화본(이전 규칙).",
+  "candidates": {
+    "claude": {
+      "family": "claude",
+      "model": "claude-haiku-5-5"
+    },
+    "codex": {
+      "family": "codex",
+      "model": "default@low"
+    },
+    "agy": {
+      "family": "agy",
+      "model": "gemini-3.8-flash-low"
+    }
+  },
+  "judges": {
+    "claude": {
+      "family": "claude",
+      "model": "claude-sonnet-5-5"
+    },
+    "codex": {
+      "family": "codex",
+      "model": "default@medium"
+    },
+    "agy": {
+      "family": "agy",
+      "model": "gemini-3.8-flash-high"
+    }
+  },
+  "byModel": {
+    "minimax:golden(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 0,
+      "latency_ms_p50": 89547,
+      "latency_ms_p90": 141619,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.11,
+      "push_pull_mean": 0.88,
+      "exercises_mean": 18.75,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    },
+    "claude:claude-haiku-5-5:p0": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 22419,
+      "latency_ms_p90": 37632,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.16,
+      "push_pull_mean": 0.93,
+      "exercises_mean": 17.81,
+      "glute_focus_glute_sets": 16,
+      "week4_continuity": 1
+    },
+    "claude:p0(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 0,
+      "latency_ms_p50": 22419,
+      "latency_ms_p90": 37632,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.12,
+      "push_pull_mean": 0.93,
+      "exercises_mean": 16.92,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    },
+    "claude:claude-haiku-5-5:p1": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 17014,
+      "latency_ms_p90": 23542,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.36,
+      "push_pull_mean": 0.92,
+      "exercises_mean": 18.06,
+      "glute_focus_glute_sets": 22,
+      "week4_continuity": 1
+    },
+    "claude:p1(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 0,
+      "latency_ms_p50": 15990,
+      "latency_ms_p90": 23542,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.33,
+      "push_pull_mean": 0.88,
+      "exercises_mean": 17.08,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    },
+    "codex:default@low:p0": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 22906,
+      "latency_ms_p90": 33801,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.19,
+      "push_pull_mean": 0.92,
+      "exercises_mean": 17.88,
+      "glute_focus_glute_sets": 12,
+      "week4_continuity": 1
+    },
+    "codex:p0(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 0,
+      "latency_ms_p50": 22906,
+      "latency_ms_p90": 33801,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.15,
+      "push_pull_mean": 0.88,
+      "exercises_mean": 16.83,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    },
+    "codex:default@low:p1": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 38778,
+      "latency_ms_p90": 65366,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.38,
+      "push_pull_mean": 0.92,
+      "exercises_mean": 18,
+      "glute_focus_glute_sets": 22,
+      "week4_continuity": 1
+    },
+    "codex:p1(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 0,
+      "latency_ms_p50": 39710,
+      "latency_ms_p90": 65366,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.36,
+      "push_pull_mean": 0.88,
+      "exercises_mean": 17.08,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    },
+    "agy:gemini-3.8-flash-low:p0": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 14537,
+      "latency_ms_p90": 28203,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.17,
+      "push_pull_mean": 0.94,
+      "exercises_mean": 17.81,
+      "glute_focus_glute_sets": 12,
+      "week4_continuity": 1
+    },
+    "agy:p0(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 0,
+      "latency_ms_p50": 14695,
+      "latency_ms_p90": 27547,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.14,
+      "push_pull_mean": 0.9,
+      "exercises_mean": 17,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    },
+    "agy:gemini-3.8-flash-low:p1": {
+      "n": 16,
+      "ok": 16,
+      "repairs": 0,
+      "latency_ms_p50": 18128,
+      "latency_ms_p90": 28188,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.36,
+      "push_pull_mean": 0.92,
+      "exercises_mean": 18.06,
+      "glute_focus_glute_sets": 22,
+      "week4_continuity": 1
+    },
+    "agy:p1(12)": {
+      "n": 12,
+      "ok": 12,
+      "repairs": 0,
+      "latency_ms_p50": 18128,
+      "latency_ms_p90": 28188,
+      "tool_violations": 0,
+      "contraindication_violations": 0,
+      "rule_problems": 0,
+      "basic_ratio_mean": 0.35,
+      "push_pull_mean": 0.88,
+      "exercises_mean": 17.08,
+      "glute_focus_glute_sets": null,
+      "week4_continuity": null
+    }
+  },
+  "judgeTally": {
+    "claude|p1_vs_p0": {
+      "A": 3,
+      "B": 0,
+      "tie": 3,
+      "votes": {
+        "beginner-3day-cardio-none": "codex:AA agy:AA",
+        "beginner-4day-upperlower": "codex:AA agy:AA",
+        "beginner-minimal-shoulder-injury": "codex:tieB agy:BB",
+        "week2-progression-pain": "codex:AA agy:AA",
+        "beginner-bodyweight-only": "codex:Atie agy:BB",
+        "beginner-home-gym-dumbbells": "codex:AA agy:BB"
+      }
+    },
+    "codex|p1_vs_p0": {
+      "A": 1,
+      "B": 2,
+      "tie": 3,
+      "votes": {
+        "beginner-3day-cardio-none": "claude:AA agy:AA",
+        "beginner-4day-upperlower": "claude:BA agy:AA",
+        "beginner-minimal-shoulder-injury": "claude:BB agy:BB",
+        "week2-progression-pain": "claude:BA agy:AA",
+        "beginner-bodyweight-only": "claude:BB agy:BB",
+        "beginner-home-gym-dumbbells": "claude:BB agy:AB"
+      }
+    },
+    "agy|p1_vs_p0": {
+      "A": 2,
+      "B": 1,
+      "tie": 3,
+      "votes": {
+        "beginner-3day-cardio-none": "claude:BB codex:AA",
+        "beginner-4day-upperlower": "claude:AA codex:AA",
+        "beginner-minimal-shoulder-injury": "claude:AA codex:BB",
+        "week2-progression-pain": "claude:AA codex:AA",
+        "beginner-bodyweight-only": "claude:BB codex:Btie",
+        "beginner-home-gym-dumbbells": "claude:BB codex:BB"
+      }
+    }
+  },
+  "retries": {}
+}

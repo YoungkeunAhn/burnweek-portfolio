@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://workout-plan-app/schemas/draft-plan-v1.json",
+  "title": "DraftPlan (LLM output, numeric-light)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "split_type", "week"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "split_type": { "type": "string", "enum": ["full_body", "upper_lower", "push_pull_legs", "body_part_3", "body_part_4", "body_part_5"] },
+    "week": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["day_index", "session_type", "focus", "items"],
+        "properties": {
+          "day_index": { "type": "integer", "minimum": 0, "maximum": 6 },
+          "session_type": { "type": "string", "enum": ["lift", "lift_plus_cardio", "cardio_only", "rest"] },
+          "focus": { "type": "string" },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["kind"],
+              "properties": {
+                "kind": { "type": "string", "enum": ["strength", "cardio"] },
+                "exercise_id": { "type": "string", "description": "kind=strength 필수" },
+                "name": { "type": "string" },
+                "role": { "type": "string", "enum": ["primary", "secondary", "accessory"] },
+                "order": { "type": "integer" },
+                "rep_intent": {
+                  "type": "string",
+                  "enum": ["strength", "hypertrophy", "endurance"],
+                  "description": "범위 의도만 — 실제 렙/세트/무게는 코드가 결정"
+                },
+                "cardio_kind": {
+                  "type": ["object", "null"],
+                  "additionalProperties": false,
+                  "description": "kind=cardio일 때. 지속시간/강도존은 코드가 상한 검증 후 확정",
+                  "properties": {
+                    "modality": {
+                      "type": "string",
+                      "enum": ["cycling", "rowing", "elliptical", "incline_walk", "running", "stairs"]
+                    },
+                    "style": { "type": "string", "enum": ["LISS", "HIIT"] }
+                  }
+                },
+                "substitution_options": { "type": "array", "items": { "type": "string" } },
+                "coaching_cue": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

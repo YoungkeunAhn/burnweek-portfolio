@@ -1,0 +1,5469 @@
+{
+  "generated_at": "2026-09-23T12:10:58.180Z",
+  "provider": "minimax",
+  "model": "MiniMax-M3",
+  "repetitions": 3,
+  "pair_concurrency": 2,
+  "max_completion_tokens_both_arms": null,
+  "quality_note": "hard_pass is mandatory; quality_score is a deterministic 5-part structural rubric, not a guarantee of physiological outcomes",
+  "summary": {
+    "adaptive": {
+      "runs": 36,
+      "ok": 36,
+      "hard_pass": 32,
+      "hard_violations": 4,
+      "repair_runs": 1,
+      "average_llm_calls": 1.03,
+      "elapsed_ms": {
+        "p50": 100339,
+        "p90": 182715,
+        "max": 285679
+      },
+      "total_tokens": {
+        "p50": 15558,
+        "p90": 29574
+      },
+      "average_quality_score": 99.63
+    },
+    "disabled": {
+      "runs": 36,
+      "ok": 35,
+      "hard_pass": 17,
+      "hard_violations": 131,
+      "repair_runs": 4,
+      "average_llm_calls": 1.14,
+      "elapsed_ms": {
+        "p50": 12148,
+        "p90": 32728,
+        "max": 41252
+      },
+      "total_tokens": {
+        "p50": 4032,
+        "p90": 8017
+      },
+      "average_quality_score": 94.41
+    },
+    "paired": {
+      "pairs": 36,
+      "disabled_faster": 36,
+      "median_elapsed_delta_ms_disabled_minus_adaptive": -101496,
+      "average_quality_delta_disabled_minus_adaptive": -5.21,
+      "average_final_exercise_jaccard": 0.24
+    }
+  },
+  "results": [
+    {
+      "profile_id": "beginner-2day-fullgym",
+      "repetition": 1,
+      "mode": "adaptive",
+      "elapsed_ms": 47943,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 9139,
+      "attempts": [
+        {
+          "elapsed_ms": 47935,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2740,
+          "completion_tokens": 6399,
+          "total_tokens": 9139
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "ab_crunch_machine"
+        ],
+        [
+          "barbell_hip_thrust",
+          "leverage_shoulder_press",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "ab_crunch_machine"
+        ],
+        [
+          "barbell_hip_thrust",
+          "leverage_shoulder_press",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-2day-fullgym",
+      "repetition": 1,
+      "mode": "disabled",
+      "elapsed_ms": 4940,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3438,
+      "attempts": [
+        {
+          "elapsed_ms": 4931,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2727,
+          "completion_tokens": 711,
+          "total_tokens": 3438
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_unresolved:day1:lat_pulldown"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "leg_lift"
+        ],
+        [
+          "dumbbell_bench_press",
+          "lat_pulldown",
+          "dumbbell_incline_row",
+          "alternate_hammer_curl"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "leg_lift"
+        ],
+        [
+          "dumbbell_bench_press",
+          "dumbbell_incline_row",
+          "alternate_hammer_curl"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-2day-fullgym",
+      "repetition": 2,
+      "mode": "adaptive",
+      "elapsed_ms": 152662,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 22449,
+      "attempts": [
+        {
+          "elapsed_ms": 152659,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2740,
+          "completion_tokens": 19709,
+          "total_tokens": 22449
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "bent_over_two_dumbbell_row"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "cable_chest_press",
+          "kneeling_high_pulley_row",
+          "dumbbell_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "bent_over_two_dumbbell_row"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "cable_chest_press",
+          "kneeling_high_pulley_row",
+          "dumbbell_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-2day-fullgym",
+      "repetition": 2,
+      "mode": "disabled",
+      "elapsed_ms": 10305,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3425,
+      "attempts": [
+        {
+          "elapsed_ms": 10303,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2727,
+          "completion_tokens": 698,
+          "total_tokens": 3425
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 90,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 0.5
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_lunges",
+          "ab_crunch_machine"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_squat",
+          "barbell_incline_bench_press_medium_grip",
+          "cable_chest_press",
+          "barbell_curl"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_lunges",
+          "ab_crunch_machine"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_squat",
+          "barbell_incline_bench_press_medium_grip",
+          "cable_chest_press",
+          "barbell_curl"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-2day-fullgym",
+      "repetition": 3,
+      "mode": "adaptive",
+      "elapsed_ms": 86442,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 12662,
+      "attempts": [
+        {
+          "elapsed_ms": 86439,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2740,
+          "completion_tokens": 9922,
+          "total_tokens": 12662
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "cable_pull_through",
+          "dumbbell_lunges",
+          "standing_calf_raises"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "bent_over_two_dumbbell_row",
+          "cable_shoulder_press",
+          "close_grip_front_lat_pulldown"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "pull_through",
+          "dumbbell_lunges",
+          "standing_calf_raises"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "bent_over_two_dumbbell_row",
+          "cable_shoulder_press",
+          "close_grip_front_lat_pulldown"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-2day-fullgym",
+      "repetition": 3,
+      "mode": "disabled",
+      "elapsed_ms": 4962,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3582,
+      "attempts": [
+        {
+          "elapsed_ms": 4960,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2727,
+          "completion_tokens": 855,
+          "total_tokens": 3582
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 90,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 0.5,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "seated_calf_raise",
+          "alternate_hammer_curl",
+          "3_4_sit_up"
+        ],
+        [
+          "leverage_shoulder_press",
+          "barbell_squat",
+          "bent_over_two_dumbbell_row",
+          "alternate_incline_dumbbell_curl"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "seated_calf_raise",
+          "alternate_hammer_curl",
+          "3_4_sit_up"
+        ],
+        [
+          "leverage_shoulder_press",
+          "barbell_squat",
+          "bent_over_two_dumbbell_row",
+          "alternate_incline_dumbbell_curl"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-3day-cardio-none",
+      "repetition": 1,
+      "mode": "adaptive",
+      "elapsed_ms": 83784,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 12686,
+      "attempts": [
+        {
+          "elapsed_ms": 83782,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2741,
+          "completion_tokens": 9945,
+          "total_tokens": 12686
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "alternate_hammer_curl"
+        ],
+        [
+          "dumbbell_squat",
+          "cable_chest_press",
+          "bent_over_two_dumbbell_row",
+          "ab_crunch_machine"
+        ],
+        [
+          "dumbbell_lunges",
+          "alternating_cable_shoulder_press",
+          "cable_rope_rear_delt_rows",
+          "bench_dips"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "alternate_hammer_curl"
+        ],
+        [
+          "dumbbell_squat",
+          "cable_chest_press",
+          "bent_over_two_dumbbell_row",
+          "ab_crunch_machine"
+        ],
+        [
+          "dumbbell_lunges",
+          "alternating_cable_shoulder_press",
+          "cable_rope_rear_delt_rows",
+          "bench_dips"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-3day-cardio-none",
+      "repetition": 1,
+      "mode": "disabled",
+      "elapsed_ms": 32728,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4511,
+      "attempts": [
+        {
+          "elapsed_ms": 32721,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2728,
+          "completion_tokens": 1783,
+          "total_tokens": 4511
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_outside_candidates:day0:seated_cable_rows->seated_cable_rows",
+        "draft_outside_candidates:day1:romanian_deadlift->romanian_deadlift",
+        "draft_unresolved:day1:lat_pulldown",
+        "draft_outside_candidates:day1:dumbbell_shoulder_press->dumbbell_shoulder_press",
+        "draft_outside_candidates:day1:cable_tricep_pushdown->triceps_pushdown",
+        "draft_outside_candidates:day2:leg_press->leg_press",
+        "draft_unresolved:day2:incline_dumbbell_bench_press",
+        "draft_outside_candidates:day2:seated_cable_row->seated_cable_rows",
+        "draft_outside_candidates:day2:dumbbell_bicep_curl->dumbbell_bicep_curl"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_cable_rows",
+          "dumbbell_lunges",
+          "standing_calf_raises"
+        ],
+        [
+          "romanian_deadlift",
+          "lat_pulldown",
+          "dumbbell_shoulder_press",
+          "cable_tricep_pushdown",
+          "ab_crunch_machine"
+        ],
+        [
+          "leg_press",
+          "incline_dumbbell_bench_press",
+          "seated_cable_row",
+          "dumbbell_bicep_curl",
+          "seated_calf_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_cable_rows",
+          "dumbbell_lunges",
+          "standing_calf_raises"
+        ],
+        [
+          "romanian_deadlift",
+          "dumbbell_shoulder_press",
+          "triceps_pushdown",
+          "ab_crunch_machine"
+        ],
+        [
+          "leg_press",
+          "seated_cable_rows",
+          "dumbbell_bicep_curl",
+          "seated_calf_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-3day-cardio-none",
+      "repetition": 2,
+      "mode": "adaptive",
+      "elapsed_ms": 100339,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 14333,
+      "attempts": [
+        {
+          "elapsed_ms": 100338,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2741,
+          "completion_tokens": 11592,
+          "total_tokens": 14333
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "kneeling_high_pulley_row",
+          "alternating_cable_shoulder_press"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "barbell_incline_bench_press_medium_grip",
+          "close_grip_front_lat_pulldown",
+          "cable_rope_rear_delt_rows"
+        ],
+        [
+          "dumbbell_lunges",
+          "decline_dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "kneeling_high_pulley_row",
+          "alternating_cable_shoulder_press"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "barbell_incline_bench_press_medium_grip",
+          "close_grip_front_lat_pulldown",
+          "cable_rope_rear_delt_rows"
+        ],
+        [
+          "dumbbell_lunges",
+          "decline_dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-3day-cardio-none",
+      "repetition": 2,
+      "mode": "disabled",
+      "elapsed_ms": 12064,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4094,
+      "attempts": [
+        {
+          "elapsed_ms": 12059,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2728,
+          "completion_tokens": 1366,
+          "total_tokens": 4094
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_unresolved:day0:seated_cable_press",
+        "draft_outside_candidates:day2:smith_machine_squat->smith_machine_squat"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "dumbbell_squat",
+          "seated_cable_press",
+          "ab_crunch_machine"
+        ],
+        [
+          "kneeling_single_arm_high_pulley_row",
+          "dumbbell_clean",
+          "cable_hammer_curls_rope_attachment",
+          "alternate_heel_touchers"
+        ],
+        [
+          "smith_machine_squat",
+          "dumbbell_lunges",
+          "barbell_bench_press_medium_grip",
+          "stiff_legged_dumbbell_deadlift",
+          "alternate_incline_dumbbell_curl"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "dumbbell_squat",
+          "ab_crunch_machine"
+        ],
+        [
+          "kneeling_single_arm_high_pulley_row",
+          "dumbbell_clean",
+          "cable_hammer_curls_rope_attachment",
+          "alternate_heel_touchers"
+        ],
+        [
+          "smith_machine_squat",
+          "dumbbell_lunges",
+          "barbell_bench_press_medium_grip",
+          "stiff_legged_dumbbell_deadlift",
+          "alternate_incline_dumbbell_curl"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-3day-cardio-none",
+      "repetition": 3,
+      "mode": "adaptive",
+      "elapsed_ms": 83256,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 13085,
+      "attempts": [
+        {
+          "elapsed_ms": 83255,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2741,
+          "completion_tokens": 10344,
+          "total_tokens": 13085
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "smith_machine_stiff_legged_deadlift",
+          "alternating_cable_shoulder_press",
+          "kneeling_high_pulley_row",
+          "standing_calf_raises"
+        ],
+        [
+          "dumbbell_lunges",
+          "barbell_incline_bench_press_medium_grip",
+          "bent_over_two_dumbbell_row",
+          "ab_crunch_machine"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "smith_machine_stiff_legged_deadlift",
+          "alternating_cable_shoulder_press",
+          "kneeling_high_pulley_row",
+          "standing_calf_raises"
+        ],
+        [
+          "dumbbell_lunges",
+          "barbell_incline_bench_press_medium_grip",
+          "bent_over_two_dumbbell_row",
+          "ab_crunch_machine"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-3day-cardio-none",
+      "repetition": 3,
+      "mode": "disabled",
+      "elapsed_ms": 7469,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3716,
+      "attempts": [
+        {
+          "elapsed_ms": 7460,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2728,
+          "completion_tokens": 988,
+          "total_tokens": 3716
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_unresolved:day0:seated_row",
+        "draft_unresolved:day0:lying_triceps_extension",
+        "draft_unresolved:day1:lat_pulldown",
+        "draft_outside_candidates:day1:dumbbell_shoulder_press->dumbbell_shoulder_press",
+        "draft_outside_candidates:day1:romanian_deadlift->romanian_deadlift",
+        "draft_unresolved:day1:dumbbell_curl",
+        "draft_unresolved:day2:incline_dumbbell_bench_press",
+        "draft_unresolved:day2:lat_pulldown",
+        "draft_outside_candidates:day2:plank->plank"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_row",
+          "lying_triceps_extension"
+        ],
+        [
+          "lat_pulldown",
+          "dumbbell_shoulder_press",
+          "romanian_deadlift",
+          "dumbbell_curl"
+        ],
+        [
+          "barbell_hip_thrust",
+          "incline_dumbbell_bench_press",
+          "lat_pulldown",
+          "plank"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press"
+        ],
+        [
+          "dumbbell_shoulder_press",
+          "romanian_deadlift"
+        ],
+        [
+          "barbell_hip_thrust",
+          "plank"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-4day-upperlower",
+      "repetition": 1,
+      "mode": "adaptive",
+      "elapsed_ms": 71696,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 20277,
+      "attempts": [
+        {
+          "elapsed_ms": 71694,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2745,
+          "completion_tokens": 17532,
+          "total_tokens": 20277
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "cable_shoulder_press",
+          "dumbbell_raise"
+        ],
+        [
+          "dumbbell_squat",
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_lunges",
+          "ab_crunch_machine"
+        ],
+        [
+          "bent_over_two_dumbbell_row",
+          "cable_chest_press",
+          "leverage_shoulder_press",
+          "alternate_hammer_curl"
+        ],
+        [
+          "barbell_squat",
+          "pull_through",
+          "step_up_with_knee_raise",
+          "standing_calf_raises"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "cable_shoulder_press",
+          "dumbbell_raise"
+        ],
+        [
+          "dumbbell_squat",
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_lunges",
+          "ab_crunch_machine"
+        ],
+        [
+          "bent_over_two_dumbbell_row",
+          "cable_chest_press",
+          "leverage_shoulder_press",
+          "alternate_hammer_curl"
+        ],
+        [
+          "barbell_squat",
+          "pull_through",
+          "step_up_with_knee_raise",
+          "standing_calf_raises"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-4day-upperlower",
+      "repetition": 1,
+      "mode": "disabled",
+      "elapsed_ms": 11270,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4154,
+      "attempts": [
+        {
+          "elapsed_ms": 11258,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2732,
+          "completion_tokens": 1422,
+          "total_tokens": 4154
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_outside_candidates:day0:leg_press->leg_press",
+        "draft_outside_candidates:day0:romanian_deadlift->romanian_deadlift",
+        "draft_unresolved:day0:leg_curl",
+        "draft_unresolved:day1:seated_dumbbell_shoulder_press",
+        "draft_outside_candidates:day1:triceps_pushdown->triceps_pushdown",
+        "draft_outside_candidates:day2:goblet_squat->goblet_squat",
+        "draft_outside_candidates:day2:leg_extension->leg_extensions",
+        "draft_unresolved:day3:lat_pulldown",
+        "draft_outside_candidates:day3:seated_cable_row->seated_cable_rows",
+        "draft_unresolved:day3:dumbbell_curl",
+        "draft_outside_candidates:day3:face_pull->face_pull",
+        "draft_outside_candidates:day3:plank->plank",
+        "final_equipment:day2:goblet_squat:kettlebells"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "leg_press",
+          "romanian_deadlift",
+          "leg_curl",
+          "standing_calf_raises"
+        ],
+        [
+          "dumbbell_bench_press",
+          "seated_dumbbell_shoulder_press",
+          "cable_chest_press",
+          "triceps_pushdown"
+        ],
+        [
+          "goblet_squat",
+          "dumbbell_lunges",
+          "leg_extension",
+          "seated_calf_raise"
+        ],
+        [
+          "lat_pulldown",
+          "seated_cable_row",
+          "dumbbell_curl",
+          "face_pull",
+          "plank"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "leg_press",
+          "romanian_deadlift",
+          "standing_calf_raises"
+        ],
+        [
+          "dumbbell_bench_press",
+          "cable_chest_press",
+          "triceps_pushdown"
+        ],
+        [
+          "goblet_squat",
+          "dumbbell_lunges",
+          "leg_extensions",
+          "seated_calf_raise"
+        ],
+        [
+          "seated_cable_rows",
+          "face_pull",
+          "plank"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-4day-upperlower",
+      "repetition": 2,
+      "mode": "adaptive",
+      "elapsed_ms": 285679,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 23242,
+      "attempts": [
+        {
+          "elapsed_ms": 285678,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2745,
+          "completion_tokens": 20497,
+          "total_tokens": 23242
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_lunges",
+          "standing_calf_raises"
+        ],
+        [
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "alternating_cable_shoulder_press",
+          "cable_preacher_curl"
+        ],
+        [
+          "cable_deadlifts",
+          "step_up_with_knee_raise",
+          "butt_lift_bridge",
+          "seated_calf_raise"
+        ],
+        [
+          "cable_chest_press",
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "leverage_shoulder_press",
+          "ab_crunch_machine"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_lunges",
+          "standing_calf_raises"
+        ],
+        [
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "alternating_cable_shoulder_press",
+          "cable_preacher_curl"
+        ],
+        [
+          "cable_deadlifts",
+          "step_up_with_knee_raise",
+          "butt_lift_bridge",
+          "seated_calf_raise"
+        ],
+        [
+          "cable_chest_press",
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "leverage_shoulder_press",
+          "ab_crunch_machine"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-4day-upperlower",
+      "repetition": 2,
+      "mode": "disabled",
+      "elapsed_ms": 7880,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4459,
+      "attempts": [
+        {
+          "elapsed_ms": 7879,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2732,
+          "completion_tokens": 1727,
+          "total_tokens": 4459
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_outside_candidates:day2:goblet_squat->goblet_squat",
+        "final_equipment:day2:goblet_squat:kettlebells"
+      ],
+      "quality": {
+        "score": 90,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 0.5,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "leg_lift"
+        ],
+        [
+          "dumbbell_bench_press",
+          "dumbbell_incline_row",
+          "alternating_cable_shoulder_press",
+          "cable_rope_rear_delt_rows"
+        ],
+        [
+          "goblet_squat",
+          "barbell_glute_bridge",
+          "standing_calf_raises",
+          "fast_skipping"
+        ],
+        [
+          "incline_push_up_close_grip",
+          "chin_up",
+          "alternate_hammer_curl",
+          "bench_dips"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "leg_lift"
+        ],
+        [
+          "dumbbell_bench_press",
+          "dumbbell_incline_row",
+          "alternating_cable_shoulder_press",
+          "cable_rope_rear_delt_rows"
+        ],
+        [
+          "goblet_squat",
+          "barbell_glute_bridge",
+          "standing_calf_raises",
+          "fast_skipping"
+        ],
+        [
+          "incline_push_up_close_grip",
+          "chin_up",
+          "alternate_hammer_curl",
+          "bench_dips"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-4day-upperlower",
+      "repetition": 3,
+      "mode": "adaptive",
+      "elapsed_ms": 135929,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 28524,
+      "attempts": [
+        {
+          "elapsed_ms": 135928,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2745,
+          "completion_tokens": 25779,
+          "total_tokens": 28524
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_lunges",
+          "standing_calf_raises"
+        ],
+        [
+          "dumbbell_bench_press",
+          "kneeling_high_pulley_row",
+          "leverage_shoulder_press",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "cable_deadlifts",
+          "step_up_with_knee_raise",
+          "glute_ham_raise",
+          "seated_calf_raise"
+        ],
+        [
+          "cable_chest_press",
+          "bent_over_two_dumbbell_row",
+          "alternating_cable_shoulder_press",
+          "bench_dips"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_lunges",
+          "standing_calf_raises"
+        ],
+        [
+          "dumbbell_bench_press",
+          "kneeling_high_pulley_row",
+          "leverage_shoulder_press",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "cable_deadlifts",
+          "step_up_with_knee_raise",
+          "glute_ham_raise",
+          "seated_calf_raise"
+        ],
+        [
+          "cable_chest_press",
+          "bent_over_two_dumbbell_row",
+          "alternating_cable_shoulder_press",
+          "bench_dips"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-4day-upperlower",
+      "repetition": 3,
+      "mode": "disabled",
+      "elapsed_ms": 12329,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4312,
+      "attempts": [
+        {
+          "elapsed_ms": 12327,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2732,
+          "completion_tokens": 1580,
+          "total_tokens": 4312
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 95,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 0.75,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "smith_machine_close_grip_bench_press",
+          "cable_chest_press",
+          "dumbbell_raise"
+        ],
+        [
+          "bodyweight_squat",
+          "dumbbell_lunges",
+          "dumbbell_squat",
+          "standing_calf_raises"
+        ],
+        [
+          "dumbbell_clean",
+          "bent_over_two_dumbbell_row",
+          "alternate_hammer_curl",
+          "air_bike"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "barbell_hip_thrust",
+          "glute_ham_raise",
+          "step_up_with_knee_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "smith_machine_close_grip_bench_press",
+          "cable_chest_press",
+          "dumbbell_raise"
+        ],
+        [
+          "bodyweight_squat",
+          "dumbbell_lunges",
+          "dumbbell_squat",
+          "standing_calf_raises"
+        ],
+        [
+          "dumbbell_clean",
+          "bent_over_two_dumbbell_row",
+          "alternate_hammer_curl",
+          "air_bike"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "barbell_hip_thrust",
+          "glute_ham_raise",
+          "step_up_with_knee_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-6day-ppl",
+      "repetition": 1,
+      "mode": "adaptive",
+      "elapsed_ms": 164329,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 23221,
+      "attempts": [
+        {
+          "elapsed_ms": 164328,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2755,
+          "completion_tokens": 20466,
+          "total_tokens": 23221
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "cable_chest_press",
+          "alternating_cable_shoulder_press",
+          "dip_machine",
+          "decline_dumbbell_flyes"
+        ],
+        [
+          "close_grip_front_lat_pulldown",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment",
+          "cable_preacher_curl"
+        ],
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "glute_ham_raise",
+          "ab_crunch_machine"
+        ],
+        [
+          "dumbbell_bench_press",
+          "barbell_incline_bench_press_medium_grip",
+          "dips_triceps_version",
+          "leverage_shoulder_press"
+        ],
+        [
+          "chin_up",
+          "kneeling_high_pulley_row",
+          "alternate_hammer_curl",
+          "barbell_curl"
+        ],
+        [
+          "barbell_hip_thrust",
+          "stiff_legged_dumbbell_deadlift",
+          "single_leg_glute_bridge",
+          "standing_calf_raises"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "cable_chest_press",
+          "alternating_cable_shoulder_press",
+          "dip_machine",
+          "decline_dumbbell_flyes"
+        ],
+        [
+          "close_grip_front_lat_pulldown",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment",
+          "cable_preacher_curl"
+        ],
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "glute_ham_raise",
+          "ab_crunch_machine"
+        ],
+        [
+          "dumbbell_bench_press",
+          "barbell_incline_bench_press_medium_grip",
+          "dips_triceps_version",
+          "leverage_shoulder_press"
+        ],
+        [
+          "chin_up",
+          "kneeling_high_pulley_row",
+          "alternate_hammer_curl",
+          "barbell_curl"
+        ],
+        [
+          "barbell_hip_thrust",
+          "stiff_legged_dumbbell_deadlift",
+          "single_leg_glute_bridge",
+          "standing_calf_raises"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-6day-ppl",
+      "repetition": 1,
+      "mode": "disabled",
+      "elapsed_ms": 36637,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 5067,
+      "attempts": [
+        {
+          "elapsed_ms": 36624,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2742,
+          "completion_tokens": 2325,
+          "total_tokens": 5067
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_unresolved:day1:lat_pulldown",
+        "draft_outside_candidates:day1:seated_cable_row->seated_cable_rows",
+        "draft_outside_candidates:day1:face_pull->face_pull",
+        "draft_unresolved:day2:leg_curl_machine",
+        "draft_outside_candidates:day3:dumbbell_incline_press->incline_dumbbell_press",
+        "draft_outside_candidates:day3:dumbbell_shoulder_press->dumbbell_shoulder_press",
+        "draft_unresolved:day3:push_up",
+        "draft_outside_candidates:day4:seated_cable_row->seated_cable_rows",
+        "draft_unresolved:day4:reverse_pec_deck",
+        "draft_outside_candidates:day5:goblet_squat->goblet_squat",
+        "draft_outside_candidates:day5:romanian_deadlift->romanian_deadlift",
+        "draft_outside_candidates:day5:leg_press->leg_press",
+        "draft_outside_candidates:day5:plank->plank",
+        "final_equipment:day5:goblet_squat:kettlebells"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "smith_machine_close_grip_bench_press",
+          "cable_chest_press",
+          "bench_dips"
+        ],
+        [
+          "lat_pulldown",
+          "seated_cable_row",
+          "face_pull",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "bodyweight_squat",
+          "dumbbell_lunges",
+          "leg_curl_machine",
+          "ab_crunch_machine"
+        ],
+        [
+          "dumbbell_incline_press",
+          "dumbbell_shoulder_press",
+          "dumbbell_lateral_raise",
+          "push_up"
+        ],
+        [
+          "bent_over_barbell_row",
+          "seated_cable_row",
+          "reverse_pec_deck",
+          "barbell_curl"
+        ],
+        [
+          "goblet_squat",
+          "romanian_deadlift",
+          "leg_press",
+          "plank"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "smith_machine_close_grip_bench_press",
+          "cable_chest_press",
+          "bench_dips"
+        ],
+        [
+          "seated_cable_rows",
+          "face_pull",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "bodyweight_squat",
+          "dumbbell_lunges",
+          "ab_crunch_machine"
+        ],
+        [
+          "incline_dumbbell_press",
+          "dumbbell_shoulder_press",
+          "dumbbell_raise"
+        ],
+        [
+          "bent_over_barbell_row",
+          "seated_cable_rows",
+          "barbell_curl"
+        ],
+        [
+          "goblet_squat",
+          "romanian_deadlift",
+          "leg_press",
+          "plank"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-6day-ppl",
+      "repetition": 2,
+      "mode": "adaptive",
+      "elapsed_ms": 118760,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 17810,
+      "attempts": [
+        {
+          "elapsed_ms": 118757,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2755,
+          "completion_tokens": 15055,
+          "total_tokens": 17810
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "cable_chest_press",
+          "cable_shoulder_press",
+          "dip_machine"
+        ],
+        [
+          "close_grip_front_lat_pulldown",
+          "kneeling_high_pulley_row",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "barbell_squat",
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_lunges",
+          "standing_calf_raises"
+        ],
+        [
+          "leverage_shoulder_press",
+          "decline_dumbbell_bench_press",
+          "close_grip_dumbbell_press",
+          "dumbbell_raise"
+        ],
+        [
+          "dumbbell_incline_row",
+          "kneeling_single_arm_high_pulley_row",
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "cable_preacher_curl"
+        ],
+        [
+          "dumbbell_squat",
+          "smith_machine_stiff_legged_deadlift",
+          "barbell_walking_lunge",
+          "seated_calf_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "cable_chest_press",
+          "cable_shoulder_press",
+          "dip_machine"
+        ],
+        [
+          "close_grip_front_lat_pulldown",
+          "kneeling_high_pulley_row",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "barbell_squat",
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_lunges",
+          "standing_calf_raises"
+        ],
+        [
+          "leverage_shoulder_press",
+          "decline_dumbbell_bench_press",
+          "close_grip_dumbbell_press",
+          "dumbbell_raise"
+        ],
+        [
+          "dumbbell_incline_row",
+          "kneeling_single_arm_high_pulley_row",
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "cable_preacher_curl"
+        ],
+        [
+          "dumbbell_squat",
+          "smith_machine_stiff_legged_deadlift",
+          "barbell_walking_lunge",
+          "seated_calf_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-6day-ppl",
+      "repetition": 2,
+      "mode": "disabled",
+      "elapsed_ms": 11993,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 5492,
+      "attempts": [
+        {
+          "elapsed_ms": 11992,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2742,
+          "completion_tokens": 2750,
+          "total_tokens": 5492
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 96.7,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 0.833
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "barbell_incline_bench_press_medium_grip",
+          "dumbbell_incline_row",
+          "dip_machine",
+          "ab_crunch_machine"
+        ],
+        [
+          "bent_over_barbell_row",
+          "close_grip_front_lat_pulldown",
+          "kneeling_single_arm_high_pulley_row",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "glute_ham_raise",
+          "barbell_hip_thrust",
+          "air_bike"
+        ],
+        [
+          "alternating_cable_shoulder_press",
+          "dumbbell_raise",
+          "cable_rope_rear_delt_rows",
+          "barbell_ab_rollout"
+        ],
+        [
+          "cable_chest_press",
+          "barbell_incline_bench_press_medium_grip",
+          "decline_dumbbell_flyes",
+          "bench_dips"
+        ],
+        [
+          "bent_over_one_arm_long_bar_row",
+          "kneeling_high_pulley_row",
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "close_grip_ez_bar_curl"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "barbell_incline_bench_press_medium_grip",
+          "dumbbell_incline_row",
+          "dip_machine",
+          "ab_crunch_machine"
+        ],
+        [
+          "bent_over_barbell_row",
+          "close_grip_front_lat_pulldown",
+          "kneeling_single_arm_high_pulley_row",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "glute_ham_raise",
+          "barbell_hip_thrust",
+          "air_bike"
+        ],
+        [
+          "alternating_cable_shoulder_press",
+          "dumbbell_raise",
+          "cable_rope_rear_delt_rows",
+          "barbell_ab_rollout"
+        ],
+        [
+          "cable_chest_press",
+          "barbell_incline_bench_press_medium_grip",
+          "decline_dumbbell_flyes",
+          "bench_dips"
+        ],
+        [
+          "bent_over_one_arm_long_bar_row",
+          "kneeling_high_pulley_row",
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "close_grip_ez_bar_curl"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-6day-ppl",
+      "repetition": 3,
+      "mode": "adaptive",
+      "elapsed_ms": 180685,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 23369,
+      "attempts": [
+        {
+          "elapsed_ms": 180682,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2755,
+          "completion_tokens": 20614,
+          "total_tokens": 23369
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "cable_shoulder_press",
+          "dips_triceps_version",
+          "decline_dumbbell_flyes"
+        ],
+        [
+          "close_grip_front_lat_pulldown",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment",
+          "ab_crunch_machine"
+        ],
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "standing_calf_raises"
+        ],
+        [
+          "barbell_incline_bench_press_medium_grip",
+          "leverage_shoulder_press",
+          "cable_chest_press",
+          "dip_machine"
+        ],
+        [
+          "chin_up",
+          "kneeling_high_pulley_row",
+          "high_cable_curls",
+          "cable_rope_rear_delt_rows"
+        ],
+        [
+          "barbell_walking_lunge",
+          "dumbbell_squat",
+          "cable_deadlifts",
+          "seated_calf_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "cable_shoulder_press",
+          "dips_triceps_version",
+          "decline_dumbbell_flyes"
+        ],
+        [
+          "close_grip_front_lat_pulldown",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment",
+          "ab_crunch_machine"
+        ],
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "standing_calf_raises"
+        ],
+        [
+          "barbell_incline_bench_press_medium_grip",
+          "leverage_shoulder_press",
+          "cable_chest_press",
+          "dip_machine"
+        ],
+        [
+          "chin_up",
+          "kneeling_high_pulley_row",
+          "high_cable_curls",
+          "cable_rope_rear_delt_rows"
+        ],
+        [
+          "barbell_walking_lunge",
+          "dumbbell_squat",
+          "cable_deadlifts",
+          "seated_calf_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-6day-ppl",
+      "repetition": 3,
+      "mode": "disabled",
+      "elapsed_ms": 30248,
+      "status": "error",
+      "message": "생성 검증이 재시도(단계별 최대 2회) 후에도 실패했습니다 — 최종 검증: 5 lifting sessions for days_per_week=6; 5 lifting sessions for days_per_week=6",
+      "llm_calls": 3,
+      "total_tokens": 13492,
+      "attempts": [
+        {
+          "elapsed_ms": 5036,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2742,
+          "completion_tokens": 1083,
+          "total_tokens": 3825
+        },
+        {
+          "elapsed_ms": 16907,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2833,
+          "completion_tokens": 2104,
+          "total_tokens": 4937
+        },
+        {
+          "elapsed_ms": 8304,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2833,
+          "completion_tokens": 1897,
+          "total_tokens": 4730
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "pipeline:error:생성 검증이 재시도(단계별 최대 2회) 후에도 실패했습니다 — 최종 검증: 5 lifting sessions for days_per_week=6; 5 lifting sessions for days_per_week=6"
+      ],
+      "quality": {
+        "score": 0,
+        "session_count_pass_rate": 0,
+        "role_order_pass_rate": 0,
+        "mechanic_order_pass_rate": 0,
+        "unique_exercise_pass_rate": 0,
+        "beginner_barbell_pass_rate": 0
+      },
+      "draft_exercise_ids": [],
+      "final_exercise_ids": []
+    },
+    {
+      "profile_id": "beginner-bodyweight-only",
+      "repetition": 1,
+      "mode": "adaptive",
+      "elapsed_ms": 165623,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 14510,
+      "attempts": [
+        {
+          "elapsed_ms": 165623,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2412,
+          "completion_tokens": 12098,
+          "total_tokens": 14510
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_outside_candidates:day0:push_ups->pushups"
+      ],
+      "quality": {
+        "score": 93.3,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 0.667,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "bodyweight_squat",
+          "push_ups",
+          "pullups",
+          "3_4_sit_up"
+        ],
+        [
+          "butt_lift_bridge",
+          "incline_push_up_wide",
+          "wide_grip_rear_pull_up",
+          "bench_dips"
+        ],
+        [
+          "step_up_with_knee_raise",
+          "push_ups_with_feet_elevated",
+          "v_bar_pullup",
+          "standing_towel_triceps_extension"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "bodyweight_squat",
+          "pushups",
+          "pullups",
+          "3_4_sit_up"
+        ],
+        [
+          "butt_lift_bridge",
+          "incline_push_up_wide",
+          "wide_grip_rear_pull_up",
+          "bench_dips"
+        ],
+        [
+          "step_up_with_knee_raise",
+          "push_ups_with_feet_elevated",
+          "v_bar_pullup",
+          "standing_towel_triceps_extension"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-bodyweight-only",
+      "repetition": 1,
+      "mode": "disabled",
+      "elapsed_ms": 10192,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3368,
+      "attempts": [
+        {
+          "elapsed_ms": 10192,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2399,
+          "completion_tokens": 969,
+          "total_tokens": 3368
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 93.3,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 0.667,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "incline_push_up",
+          "bodyweight_squat",
+          "single_leg_glute_bridge",
+          "air_bike"
+        ],
+        [
+          "push_ups_close_triceps_position",
+          "step_up_with_knee_raise",
+          "hyperextensions_with_no_hyperextension_bench",
+          "3_4_sit_up"
+        ],
+        [
+          "incline_push_up_wide",
+          "bottoms_up",
+          "glute_kickback",
+          "flutter_kicks"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "incline_push_up",
+          "bodyweight_squat",
+          "single_leg_glute_bridge",
+          "air_bike"
+        ],
+        [
+          "push_ups_close_triceps_position",
+          "step_up_with_knee_raise",
+          "hyperextensions_with_no_hyperextension_bench",
+          "3_4_sit_up"
+        ],
+        [
+          "incline_push_up_wide",
+          "bottoms_up",
+          "glute_kickback",
+          "flutter_kicks"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-bodyweight-only",
+      "repetition": 2,
+      "mode": "adaptive",
+      "elapsed_ms": 59746,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 12389,
+      "attempts": [
+        {
+          "elapsed_ms": 59745,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2412,
+          "completion_tokens": 9977,
+          "total_tokens": 12389
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_outside_candidates:day1:push_ups->pushups"
+      ],
+      "quality": {
+        "score": 93.3,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 0.667,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "bodyweight_squat",
+          "incline_push_up",
+          "pullups",
+          "single_leg_glute_bridge",
+          "3_4_sit_up"
+        ],
+        [
+          "step_up_with_knee_raise",
+          "push_ups",
+          "chin_up",
+          "butt_lift_bridge",
+          "standing_towel_triceps_extension"
+        ],
+        [
+          "bodyweight_squat",
+          "incline_push_up_reverse_grip",
+          "wide_grip_rear_pull_up",
+          "natural_glute_ham_raise",
+          "dips_triceps_version"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "bodyweight_squat",
+          "incline_push_up",
+          "pullups",
+          "single_leg_glute_bridge",
+          "3_4_sit_up"
+        ],
+        [
+          "step_up_with_knee_raise",
+          "pushups",
+          "chin_up",
+          "butt_lift_bridge",
+          "standing_towel_triceps_extension"
+        ],
+        [
+          "bodyweight_squat",
+          "incline_push_up_reverse_grip",
+          "wide_grip_rear_pull_up",
+          "natural_glute_ham_raise",
+          "dips_triceps_version"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-bodyweight-only",
+      "repetition": 2,
+      "mode": "disabled",
+      "elapsed_ms": 12830,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3547,
+      "attempts": [
+        {
+          "elapsed_ms": 12829,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2399,
+          "completion_tokens": 1148,
+          "total_tokens": 3547
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 93.3,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 0.667,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "bodyweight_squat",
+          "push_ups_with_feet_elevated",
+          "body_tricep_press",
+          "single_leg_glute_bridge"
+        ],
+        [
+          "pullups",
+          "incline_push_up_wide",
+          "air_bike",
+          "bottoms_up"
+        ],
+        [
+          "step_up_with_knee_raise",
+          "incline_push_up_close_grip",
+          "body_up",
+          "glute_kickback"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "bodyweight_squat",
+          "push_ups_with_feet_elevated",
+          "body_tricep_press",
+          "single_leg_glute_bridge"
+        ],
+        [
+          "pullups",
+          "incline_push_up_wide",
+          "air_bike",
+          "bottoms_up"
+        ],
+        [
+          "step_up_with_knee_raise",
+          "incline_push_up_close_grip",
+          "body_up",
+          "glute_kickback"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-bodyweight-only",
+      "repetition": 3,
+      "mode": "adaptive",
+      "elapsed_ms": 92283,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 18894,
+      "attempts": [
+        {
+          "elapsed_ms": 92283,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2412,
+          "completion_tokens": 16482,
+          "total_tokens": 18894
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "bodyweight_squat",
+          "incline_push_up",
+          "pullups",
+          "butt_lift_bridge"
+        ],
+        [
+          "step_up_with_knee_raise",
+          "push_up_wide",
+          "chin_up",
+          "3_4_sit_up"
+        ],
+        [
+          "bodyweight_squat",
+          "push_ups_with_feet_elevated",
+          "wide_grip_rear_pull_up",
+          "natural_glute_ham_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "bodyweight_squat",
+          "incline_push_up",
+          "pullups",
+          "butt_lift_bridge"
+        ],
+        [
+          "step_up_with_knee_raise",
+          "push_up_wide",
+          "chin_up",
+          "3_4_sit_up"
+        ],
+        [
+          "bodyweight_squat",
+          "push_ups_with_feet_elevated",
+          "wide_grip_rear_pull_up",
+          "natural_glute_ham_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-bodyweight-only",
+      "repetition": 3,
+      "mode": "disabled",
+      "elapsed_ms": 9598,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3470,
+      "attempts": [
+        {
+          "elapsed_ms": 9597,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2399,
+          "completion_tokens": 1071,
+          "total_tokens": 3470
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 93.3,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 0.667,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "bodyweight_squat",
+          "push_ups_with_feet_elevated",
+          "glute_kickback",
+          "bent_knee_hip_raise"
+        ],
+        [
+          "push_ups_with_feet_elevated",
+          "body_tricep_press",
+          "single_leg_glute_bridge",
+          "hyperextensions_with_no_hyperextension_bench"
+        ],
+        [
+          "bodyweight_squat",
+          "push_up_wide",
+          "glute_kickback",
+          "3_4_sit_up"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "bodyweight_squat",
+          "push_ups_with_feet_elevated",
+          "glute_kickback",
+          "bent_knee_hip_raise"
+        ],
+        [
+          "push_ups_with_feet_elevated",
+          "body_tricep_press",
+          "single_leg_glute_bridge",
+          "hyperextensions_with_no_hyperextension_bench"
+        ],
+        [
+          "bodyweight_squat",
+          "push_up_wide",
+          "glute_kickback",
+          "3_4_sit_up"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-home-gym-dumbbells",
+      "repetition": 1,
+      "mode": "adaptive",
+      "elapsed_ms": 244542,
+      "status": "ok",
+      "llm_calls": 2,
+      "total_tokens": 29574,
+      "attempts": [
+        {
+          "elapsed_ms": 108160,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2665,
+          "completion_tokens": 7237,
+          "total_tokens": 9902
+        },
+        {
+          "elapsed_ms": 136381,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2716,
+          "completion_tokens": 16956,
+          "total_tokens": 19672
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "standing_dumbbell_press",
+          "concentration_curls"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "incline_dumbbell_bench_with_palms_facing_in",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_tricep_extension_pronated_grip"
+        ],
+        [
+          "split_squat_with_dumbbells",
+          "arnold_dumbbell_press",
+          "dumbbell_incline_row",
+          "hammer_curls"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "standing_dumbbell_press",
+          "concentration_curls"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "incline_dumbbell_bench_with_palms_facing_in",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_tricep_extension_pronated_grip"
+        ],
+        [
+          "split_squat_with_dumbbells",
+          "arnold_dumbbell_press",
+          "dumbbell_incline_row",
+          "hammer_curls"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-home-gym-dumbbells",
+      "repetition": 1,
+      "mode": "disabled",
+      "elapsed_ms": 11826,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3982,
+      "attempts": [
+        {
+          "elapsed_ms": 11824,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2652,
+          "completion_tokens": 1330,
+          "total_tokens": 3982
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "one_arm_dumbbell_row",
+          "dumbbell_squat",
+          "dumbbell_alternate_bicep_curl"
+        ],
+        [
+          "standing_dumbbell_press",
+          "dumbbell_incline_row",
+          "stiff_legged_dumbbell_deadlift",
+          "incline_dumbbell_flyes"
+        ],
+        [
+          "dumbbell_close_grip_press",
+          "bent_over_two_dumbbell_row",
+          "split_squat_with_dumbbells",
+          "dumbbell_tricep_extension_pronated_grip"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "one_arm_dumbbell_row",
+          "dumbbell_squat",
+          "dumbbell_alternate_bicep_curl"
+        ],
+        [
+          "standing_dumbbell_press",
+          "dumbbell_incline_row",
+          "stiff_legged_dumbbell_deadlift",
+          "incline_dumbbell_flyes"
+        ],
+        [
+          "close_grip_dumbbell_press",
+          "bent_over_two_dumbbell_row",
+          "split_squat_with_dumbbells",
+          "dumbbell_tricep_extension_pronated_grip"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-home-gym-dumbbells",
+      "repetition": 2,
+      "mode": "adaptive",
+      "elapsed_ms": 93282,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 8719,
+      "attempts": [
+        {
+          "elapsed_ms": 93281,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2665,
+          "completion_tokens": 6054,
+          "total_tokens": 8719
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "incline_dumbbell_bench_with_palms_facing_in",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_tricep_extension_pronated_grip"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "arnold_dumbbell_press",
+          "standing_dumbbell_upright_row",
+          "alternate_hammer_curl"
+        ],
+        [
+          "split_squat_with_dumbbells",
+          "dumbbell_floor_press",
+          "dumbbell_incline_row",
+          "dumbbell_side_bend"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "incline_dumbbell_bench_with_palms_facing_in",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_tricep_extension_pronated_grip"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "arnold_dumbbell_press",
+          "standing_dumbbell_upright_row",
+          "alternate_hammer_curl"
+        ],
+        [
+          "split_squat_with_dumbbells",
+          "dumbbell_floor_press",
+          "dumbbell_incline_row",
+          "dumbbell_side_bend"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-home-gym-dumbbells",
+      "repetition": 2,
+      "mode": "disabled",
+      "elapsed_ms": 12148,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4015,
+      "attempts": [
+        {
+          "elapsed_ms": 12148,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2652,
+          "completion_tokens": 1363,
+          "total_tokens": 4015
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "incline_dumbbell_bench_with_palms_facing_in",
+          "incline_dumbbell_flyes",
+          "one_arm_supinated_dumbbell_triceps_extension"
+        ],
+        [
+          "one_arm_dumbbell_row",
+          "dumbbell_incline_row",
+          "dumbbell_alternate_bicep_curl",
+          "cross_body_hammer_curl"
+        ],
+        [
+          "dumbbell_squat",
+          "split_squat_with_dumbbells",
+          "stiff_legged_dumbbell_deadlift",
+          "standing_dumbbell_press",
+          "calf_raise_on_a_dumbbell"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "incline_dumbbell_bench_with_palms_facing_in",
+          "incline_dumbbell_flyes",
+          "one_arm_supinated_dumbbell_triceps_extension"
+        ],
+        [
+          "one_arm_dumbbell_row",
+          "dumbbell_incline_row",
+          "dumbbell_alternate_bicep_curl",
+          "cross_body_hammer_curl"
+        ],
+        [
+          "dumbbell_squat",
+          "split_squat_with_dumbbells",
+          "stiff_legged_dumbbell_deadlift",
+          "standing_dumbbell_press",
+          "calf_raise_on_a_dumbbell"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-home-gym-dumbbells",
+      "repetition": 3,
+      "mode": "adaptive",
+      "elapsed_ms": 87317,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 15558,
+      "attempts": [
+        {
+          "elapsed_ms": 87316,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2665,
+          "completion_tokens": 12893,
+          "total_tokens": 15558
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "one_arm_dumbbell_row",
+          "standing_dumbbell_press"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "bent_over_two_dumbbell_row",
+          "incline_dumbbell_bench_with_palms_facing_in",
+          "dumbbell_bicep_curl"
+        ],
+        [
+          "split_squat_with_dumbbells",
+          "dumbbell_floor_press",
+          "dumbbell_incline_row",
+          "dumbbell_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "one_arm_dumbbell_row",
+          "standing_dumbbell_press"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "bent_over_two_dumbbell_row",
+          "incline_dumbbell_bench_with_palms_facing_in",
+          "dumbbell_bicep_curl"
+        ],
+        [
+          "split_squat_with_dumbbells",
+          "dumbbell_floor_press",
+          "dumbbell_incline_row",
+          "dumbbell_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-home-gym-dumbbells",
+      "repetition": 3,
+      "mode": "disabled",
+      "elapsed_ms": 14026,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3754,
+      "attempts": [
+        {
+          "elapsed_ms": 14026,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2652,
+          "completion_tokens": 1102,
+          "total_tokens": 3754
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "one_arm_dumbbell_row",
+          "dumbbell_squat",
+          "dumbbell_alternate_bicep_curl"
+        ],
+        [
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "standing_alternating_dumbbell_press",
+          "dumbbell_side_bend"
+        ],
+        [
+          "dumbbell_bench_press_with_neutral_grip",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_step_ups",
+          "alternate_hammer_curl"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "one_arm_dumbbell_row",
+          "dumbbell_squat",
+          "dumbbell_alternate_bicep_curl"
+        ],
+        [
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "standing_alternating_dumbbell_press",
+          "dumbbell_side_bend"
+        ],
+        [
+          "dumbbell_bench_press_with_neutral_grip",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_step_ups",
+          "alternate_hammer_curl"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-lowrisk-flag",
+      "repetition": 1,
+      "mode": "adaptive",
+      "elapsed_ms": 157917,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 20104,
+      "attempts": [
+        {
+          "elapsed_ms": 157917,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2755,
+          "completion_tokens": 17349,
+          "total_tokens": 20104
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "ab_crunch_machine"
+        ],
+        [
+          "cable_deadlifts",
+          "cable_chest_press",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "dumbbell_squat",
+          "barbell_bench_press_medium_grip",
+          "cable_shoulder_press",
+          "kneeling_high_pulley_row"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "ab_crunch_machine"
+        ],
+        [
+          "cable_deadlifts",
+          "cable_chest_press",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "dumbbell_squat",
+          "barbell_bench_press_medium_grip",
+          "cable_shoulder_press",
+          "kneeling_high_pulley_row"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-lowrisk-flag",
+      "repetition": 1,
+      "mode": "disabled",
+      "elapsed_ms": 28608,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4340,
+      "attempts": [
+        {
+          "elapsed_ms": 28606,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2742,
+          "completion_tokens": 1598,
+          "total_tokens": 4340
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_outside_candidates:day1:dumbbell_shoulder_press->dumbbell_shoulder_press"
+      ],
+      "quality": {
+        "score": 86.7,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 0.333,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_squat",
+          "dumbbell_seated_one_leg_calf_raise",
+          "glute_kickback"
+        ],
+        [
+          "dumbbell_incline_row",
+          "dumbbell_shoulder_press",
+          "dumbbell_lunges",
+          "alternate_hammer_curl",
+          "air_bike"
+        ],
+        [
+          "barbell_squat",
+          "dumbbell_incline_row",
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_bench_press_with_neutral_grip",
+          "step_up_with_knee_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_squat",
+          "dumbbell_seated_one_leg_calf_raise",
+          "glute_kickback"
+        ],
+        [
+          "dumbbell_incline_row",
+          "dumbbell_shoulder_press",
+          "dumbbell_lunges",
+          "alternate_hammer_curl",
+          "air_bike"
+        ],
+        [
+          "barbell_squat",
+          "dumbbell_incline_row",
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_bench_press_with_neutral_grip",
+          "step_up_with_knee_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-lowrisk-flag",
+      "repetition": 2,
+      "mode": "adaptive",
+      "elapsed_ms": 79223,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 12411,
+      "attempts": [
+        {
+          "elapsed_ms": 79221,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2755,
+          "completion_tokens": 9656,
+          "total_tokens": 12411
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "kneeling_high_pulley_row",
+          "ab_crunch_machine"
+        ],
+        [
+          "barbell_squat",
+          "cable_chest_press",
+          "close_grip_front_lat_pulldown",
+          "cable_preacher_curl"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "cable_shoulder_press",
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "cable_rope_rear_delt_rows"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "kneeling_high_pulley_row",
+          "ab_crunch_machine"
+        ],
+        [
+          "barbell_squat",
+          "cable_chest_press",
+          "close_grip_front_lat_pulldown",
+          "cable_preacher_curl"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "cable_shoulder_press",
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "cable_rope_rear_delt_rows"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-lowrisk-flag",
+      "repetition": 2,
+      "mode": "disabled",
+      "elapsed_ms": 12292,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4188,
+      "attempts": [
+        {
+          "elapsed_ms": 12281,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2742,
+          "completion_tokens": 1446,
+          "total_tokens": 4188
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_outside_candidates:day0:leg_press->leg_press",
+        "draft_unresolved:day0:seated_row_machine",
+        "draft_outside_candidates:day0:dumbbell_shoulder_press->dumbbell_shoulder_press",
+        "draft_unresolved:day0:leg_curl",
+        "draft_unresolved:day1:lat_pulldown",
+        "draft_outside_candidates:day1:romanian_deadlift->romanian_deadlift",
+        "draft_outside_candidates:day1:incline_dumbbell_press->incline_dumbbell_press",
+        "draft_outside_candidates:day1:seated_cable_row->seated_cable_rows",
+        "draft_unresolved:day1:dumbbell_curl",
+        "draft_outside_candidates:day2:goblet_squat->goblet_squat",
+        "draft_unresolved:day2:chest_press_machine",
+        "draft_unresolved:day2:lat_pulldown",
+        "draft_outside_candidates:day2:leg_press->leg_press",
+        "draft_outside_candidates:day2:tricep_pushdown->triceps_pushdown",
+        "draft_outside_candidates:day2:face_pull->face_pull",
+        "final_equipment:day2:goblet_squat:kettlebells"
+      ],
+      "quality": {
+        "score": 93.3,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 0.667,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "leg_press",
+          "dumbbell_bench_press",
+          "seated_row_machine",
+          "dumbbell_shoulder_press",
+          "leg_curl",
+          "ab_crunch_machine"
+        ],
+        [
+          "lat_pulldown",
+          "romanian_deadlift",
+          "incline_dumbbell_press",
+          "seated_cable_row",
+          "dumbbell_curl",
+          "standing_calf_raises"
+        ],
+        [
+          "goblet_squat",
+          "chest_press_machine",
+          "lat_pulldown",
+          "leg_press",
+          "tricep_pushdown",
+          "face_pull"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "leg_press",
+          "dumbbell_bench_press",
+          "dumbbell_shoulder_press",
+          "ab_crunch_machine"
+        ],
+        [
+          "romanian_deadlift",
+          "incline_dumbbell_press",
+          "seated_cable_rows",
+          "standing_calf_raises"
+        ],
+        [
+          "goblet_squat",
+          "leg_press",
+          "triceps_pushdown",
+          "face_pull"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-lowrisk-flag",
+      "repetition": 3,
+      "mode": "adaptive",
+      "elapsed_ms": 118064,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 14434,
+      "attempts": [
+        {
+          "elapsed_ms": 118061,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2755,
+          "completion_tokens": 11679,
+          "total_tokens": 14434
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "dumbbell_stiff_legged_deadlift"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "cable_deadlifts",
+          "bent_over_two_dumbbell_row",
+          "cable_shoulder_press"
+        ],
+        [
+          "barbell_hip_thrust",
+          "cable_chest_press",
+          "cable_rope_rear_delt_rows",
+          "dumbbell_squat"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "stiff_legged_dumbbell_deadlift"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "cable_deadlifts",
+          "bent_over_two_dumbbell_row",
+          "cable_shoulder_press"
+        ],
+        [
+          "barbell_hip_thrust",
+          "cable_chest_press",
+          "cable_rope_rear_delt_rows",
+          "dumbbell_squat"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-lowrisk-flag",
+      "repetition": 3,
+      "mode": "disabled",
+      "elapsed_ms": 6515,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3996,
+      "attempts": [
+        {
+          "elapsed_ms": 6508,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2742,
+          "completion_tokens": 1254,
+          "total_tokens": 3996
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_outside_candidates:day0:seated_cable_rows->seated_cable_rows",
+        "draft_outside_candidates:day1:romanian_deadlift->romanian_deadlift",
+        "draft_unresolved:day1:dumbbell_overhead_press",
+        "draft_unresolved:day1:lat_pulldown",
+        "draft_outside_candidates:day1:leg_press->leg_press",
+        "draft_unresolved:day2:barbell_bench_press",
+        "draft_unresolved:day2:barbell_row",
+        "draft_unresolved:day2:dumbbell_curl"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_cable_rows",
+          "dumbbell_lunges"
+        ],
+        [
+          "romanian_deadlift",
+          "dumbbell_overhead_press",
+          "lat_pulldown",
+          "leg_press",
+          "ab_crunch_machine"
+        ],
+        [
+          "barbell_bench_press",
+          "barbell_row",
+          "dumbbell_squat",
+          "dumbbell_curl",
+          "seated_calf_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_cable_rows",
+          "dumbbell_lunges"
+        ],
+        [
+          "romanian_deadlift",
+          "leg_press",
+          "ab_crunch_machine"
+        ],
+        [
+          "dumbbell_squat",
+          "seated_calf_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-minimal-shoulder-injury",
+      "repetition": 1,
+      "mode": "adaptive",
+      "elapsed_ms": 17158,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 7851,
+      "attempts": [
+        {
+          "elapsed_ms": 17155,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2683,
+          "completion_tokens": 5168,
+          "total_tokens": 7851
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "hammer_grip_incline_db_bench_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_alternate_bicep_curl"
+        ],
+        [
+          "dumbbell_lunges",
+          "dumbbell_bench_press_with_neutral_grip",
+          "dumbbell_incline_row",
+          "cross_body_hammer_curl"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "decline_dumbbell_bench_press",
+          "one_arm_dumbbell_row",
+          "air_bike"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "decline_dumbbell_flyes",
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "dumbbell_alternate_bicep_curl"
+        ],
+        [
+          "dumbbell_lunges",
+          "dumbbell_flyes",
+          "middle_back_shrug",
+          "cross_body_hammer_curl"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "one_arm_flat_bench_dumbbell_flye",
+          "air_bike"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-minimal-shoulder-injury",
+      "repetition": 1,
+      "mode": "disabled",
+      "elapsed_ms": 6465,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3972,
+      "attempts": [
+        {
+          "elapsed_ms": 6462,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2670,
+          "completion_tokens": 1302,
+          "total_tokens": 3972
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_squat",
+          "push_ups_close_triceps_position"
+        ],
+        [
+          "dumbbell_lunges",
+          "dumbbell_one_arm_row",
+          "standing_dumbbell_press",
+          "dumbbell_alternate_bicep_curl"
+        ],
+        [
+          "dumbbell_bench_press_with_neutral_grip",
+          "stiff_legged_dumbbell_deadlift",
+          "incline_push_up",
+          "bottoms_up"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "decline_dumbbell_flyes",
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "dumbbell_squat",
+          "body_tricep_press"
+        ],
+        [
+          "dumbbell_lunges",
+          "middle_back_shrug",
+          "dumbbell_alternate_bicep_curl"
+        ],
+        [
+          "dumbbell_flyes",
+          "stiff_legged_dumbbell_deadlift",
+          "bottoms_up"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-minimal-shoulder-injury",
+      "repetition": 2,
+      "mode": "adaptive",
+      "elapsed_ms": 178038,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 15765,
+      "attempts": [
+        {
+          "elapsed_ms": 178037,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2683,
+          "completion_tokens": 13082,
+          "total_tokens": 15765
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press_with_neutral_grip",
+          "one_arm_dumbbell_row",
+          "dumbbell_lunges",
+          "bent_knee_hip_raise"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "decline_dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_bicep_curl",
+          "dumbbell_tricep_extension_pronated_grip"
+        ],
+        [
+          "plie_dumbbell_squat",
+          "dumbbell_floor_press",
+          "dumbbell_incline_row",
+          "alternate_hammer_curl",
+          "standing_dumbbell_calf_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "decline_dumbbell_flyes",
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "dumbbell_lunges",
+          "bent_knee_hip_raise"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_flyes",
+          "middle_back_shrug",
+          "dumbbell_bicep_curl",
+          "dumbbell_tricep_extension_pronated_grip"
+        ],
+        [
+          "plie_dumbbell_squat",
+          "decline_dumbbell_triceps_extension",
+          "alternate_hammer_curl",
+          "standing_dumbbell_calf_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-minimal-shoulder-injury",
+      "repetition": 2,
+      "mode": "disabled",
+      "elapsed_ms": 21289,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3853,
+      "attempts": [
+        {
+          "elapsed_ms": 21285,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2670,
+          "completion_tokens": 1183,
+          "total_tokens": 3853
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 93.3,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 0.667,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press_with_neutral_grip",
+          "dumbbell_one_arm_row",
+          "dumbbell_squat",
+          "3_4_sit_up"
+        ],
+        [
+          "dumbbell_lunges",
+          "dumbbell_shoulder_press",
+          "dumbbell_one_arm_row",
+          "bent_knee_hip_raise"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_bench_press",
+          "dumbbell_alternate_bicep_curl",
+          "incline_push_up"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "decline_dumbbell_flyes",
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "dumbbell_squat",
+          "3_4_sit_up"
+        ],
+        [
+          "dumbbell_lunges",
+          "middle_back_shrug",
+          "bent_knee_hip_raise"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_flyes",
+          "dumbbell_alternate_bicep_curl"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-minimal-shoulder-injury",
+      "repetition": 3,
+      "mode": "adaptive",
+      "elapsed_ms": 134347,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 11675,
+      "attempts": [
+        {
+          "elapsed_ms": 134346,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2683,
+          "completion_tokens": 8992,
+          "total_tokens": 11675
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press_with_neutral_grip",
+          "incline_push_up",
+          "close_grip_push_up_off_of_a_dumbbell",
+          "decline_dumbbell_triceps_extension"
+        ],
+        [
+          "bent_over_two_dumbbell_row",
+          "dumbbell_incline_row",
+          "alternate_hammer_curl",
+          "concentration_curls"
+        ],
+        [
+          "dumbbell_squat",
+          "plie_dumbbell_squat",
+          "stiff_legged_dumbbell_deadlift",
+          "standing_dumbbell_calf_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "decline_dumbbell_flyes",
+          "body_tricep_press",
+          "decline_dumbbell_triceps_extension"
+        ],
+        [
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "middle_back_shrug",
+          "alternate_hammer_curl",
+          "concentration_curls"
+        ],
+        [
+          "dumbbell_squat",
+          "plie_dumbbell_squat",
+          "stiff_legged_dumbbell_deadlift",
+          "standing_dumbbell_calf_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "beginner-minimal-shoulder-injury",
+      "repetition": 3,
+      "mode": "disabled",
+      "elapsed_ms": 22991,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4032,
+      "attempts": [
+        {
+          "elapsed_ms": 22988,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2670,
+          "completion_tokens": 1362,
+          "total_tokens": 4032
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_unresolved:day1:alternating_dumbbell_curl"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "incline_dumbbell_press",
+          "dumbbell_squat",
+          "one_arm_dumbbell_row",
+          "dumbbell_floor_press"
+        ],
+        [
+          "dumbbell_one_arm_shoulder_press",
+          "stiff_legged_dumbbell_deadlift",
+          "bent_over_two_dumbbell_row",
+          "alternating_dumbbell_curl"
+        ],
+        [
+          "dumbbell_bench_press_with_neutral_grip",
+          "dumbbell_lunges",
+          "dumbbell_incline_row",
+          "air_bike"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "decline_dumbbell_flyes",
+          "dumbbell_squat",
+          "bent_over_two_dumbbell_row_with_palms_in",
+          "decline_dumbbell_triceps_extension"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "middle_back_shrug"
+        ],
+        [
+          "dumbbell_flyes",
+          "dumbbell_lunges",
+          "air_bike"
+        ]
+      ]
+    },
+    {
+      "profile_id": "novice-5day-ppl-conditioning",
+      "repetition": 1,
+      "mode": "adaptive",
+      "elapsed_ms": 158731,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 32437,
+      "attempts": [
+        {
+          "elapsed_ms": 158729,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2742,
+          "completion_tokens": 29695,
+          "total_tokens": 32437
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_incline_bench_press_medium_grip",
+          "cable_shoulder_press",
+          "close_grip_barbell_bench_press"
+        ],
+        [
+          "bent_over_barbell_row",
+          "chin_up",
+          "close_grip_front_lat_pulldown",
+          "barbell_curl",
+          "ab_crunch_machine"
+        ],
+        [
+          "barbell_squat",
+          "smith_machine_stiff_legged_deadlift",
+          "dumbbell_lunges",
+          "standing_calf_raises"
+        ],
+        [
+          "leverage_shoulder_press",
+          "dumbbell_incline_row",
+          "cable_chest_press",
+          "barbell_curl"
+        ],
+        [
+          "barbell_hip_thrust",
+          "stiff_legged_dumbbell_deadlift",
+          "barbell_side_split_squat",
+          "barbell_seated_calf_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_incline_bench_press_medium_grip",
+          "cable_shoulder_press",
+          "close_grip_barbell_bench_press"
+        ],
+        [
+          "bent_over_barbell_row",
+          "chin_up",
+          "close_grip_front_lat_pulldown",
+          "barbell_curl",
+          "ab_crunch_machine"
+        ],
+        [
+          "barbell_squat",
+          "smith_machine_stiff_legged_deadlift",
+          "dumbbell_lunges",
+          "standing_calf_raises"
+        ],
+        [
+          "leverage_shoulder_press",
+          "dumbbell_incline_row",
+          "cable_chest_press",
+          "barbell_curl"
+        ],
+        [
+          "barbell_hip_thrust",
+          "stiff_legged_dumbbell_deadlift",
+          "barbell_side_split_squat",
+          "barbell_seated_calf_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "novice-5day-ppl-conditioning",
+      "repetition": 1,
+      "mode": "disabled",
+      "elapsed_ms": 41252,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 5116,
+      "attempts": [
+        {
+          "elapsed_ms": 41251,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2729,
+          "completion_tokens": 2387,
+          "total_tokens": 5116
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 88,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 0.8,
+        "mechanic_order_pass_rate": 0.6,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_incline_bench_press_medium_grip",
+          "cable_chest_press",
+          "bent_over_barbell_row",
+          "ab_crunch_machine"
+        ],
+        [
+          "barbell_squat",
+          "barbell_hip_thrust",
+          "good_morning",
+          "standing_calf_raises"
+        ],
+        [
+          "chin_up",
+          "dumbbell_bench_press_with_neutral_grip",
+          "bent_over_two_dumbbell_row",
+          "barbell_curl",
+          "close_grip_dumbbell_press"
+        ],
+        [
+          "barbell_squat",
+          "barbell_walking_lunge",
+          "cable_deadlifts",
+          "barbell_seated_calf_raise"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_incline_shoulder_raise",
+          "cable_chest_press",
+          "kneeling_high_pulley_row",
+          "close_grip_ez_bar_curl",
+          "bench_dips"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_incline_bench_press_medium_grip",
+          "cable_chest_press",
+          "bent_over_barbell_row",
+          "ab_crunch_machine"
+        ],
+        [
+          "barbell_squat",
+          "barbell_hip_thrust",
+          "good_morning",
+          "standing_calf_raises"
+        ],
+        [
+          "chin_up",
+          "dumbbell_bench_press_with_neutral_grip",
+          "bent_over_two_dumbbell_row",
+          "barbell_curl",
+          "close_grip_dumbbell_press"
+        ],
+        [
+          "barbell_squat",
+          "barbell_walking_lunge",
+          "cable_deadlifts",
+          "barbell_seated_calf_raise"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_incline_shoulder_raise",
+          "cable_chest_press",
+          "kneeling_high_pulley_row",
+          "close_grip_ez_bar_curl",
+          "bench_dips"
+        ]
+      ]
+    },
+    {
+      "profile_id": "novice-5day-ppl-conditioning",
+      "repetition": 2,
+      "mode": "adaptive",
+      "elapsed_ms": 129409,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 30456,
+      "attempts": [
+        {
+          "elapsed_ms": 129406,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2742,
+          "completion_tokens": 27714,
+          "total_tokens": 30456
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_unresolved:day0:dumbbell_incline_bench_press"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_bench_press_medium_grip",
+          "dumbbell_incline_bench_press",
+          "alternating_cable_shoulder_press",
+          "close_grip_dumbbell_press"
+        ],
+        [
+          "bent_over_barbell_row",
+          "close_grip_front_lat_pulldown",
+          "bent_over_two_dumbbell_row",
+          "barbell_curl"
+        ],
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "standing_calf_raises"
+        ],
+        [
+          "decline_dumbbell_bench_press",
+          "kneeling_high_pulley_row",
+          "leverage_shoulder_press",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "barbell_hip_thrust",
+          "barbell_side_split_squat",
+          "good_morning",
+          "seated_calf_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_bench_press_medium_grip",
+          "alternating_cable_shoulder_press",
+          "close_grip_dumbbell_press"
+        ],
+        [
+          "bent_over_barbell_row",
+          "close_grip_front_lat_pulldown",
+          "bent_over_two_dumbbell_row",
+          "barbell_curl"
+        ],
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "standing_calf_raises"
+        ],
+        [
+          "decline_dumbbell_bench_press",
+          "kneeling_high_pulley_row",
+          "leverage_shoulder_press",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "barbell_hip_thrust",
+          "barbell_side_split_squat",
+          "good_morning",
+          "seated_calf_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "novice-5day-ppl-conditioning",
+      "repetition": 2,
+      "mode": "disabled",
+      "elapsed_ms": 27913,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4544,
+      "attempts": [
+        {
+          "elapsed_ms": 27911,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2729,
+          "completion_tokens": 1815,
+          "total_tokens": 4544
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "seated_calf_raise"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_incline_bench_press_medium_grip",
+          "chin_up",
+          "bent_over_barbell_row"
+        ],
+        [
+          "barbell_hip_thrust",
+          "barbell_side_split_squat",
+          "glute_ham_raise",
+          "standing_calf_raises"
+        ],
+        [
+          "dumbbell_bench_press",
+          "barbell_incline_shoulder_raise",
+          "close_grip_barbell_bench_press",
+          "barbell_curl"
+        ],
+        [
+          "dumbbell_incline_row",
+          "cable_rope_rear_delt_rows",
+          "dips_triceps_version",
+          "ab_crunch_machine"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "seated_calf_raise"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_incline_bench_press_medium_grip",
+          "chin_up",
+          "bent_over_barbell_row"
+        ],
+        [
+          "barbell_hip_thrust",
+          "barbell_side_split_squat",
+          "glute_ham_raise",
+          "standing_calf_raises"
+        ],
+        [
+          "dumbbell_bench_press",
+          "barbell_incline_shoulder_raise",
+          "close_grip_barbell_bench_press",
+          "barbell_curl"
+        ],
+        [
+          "dumbbell_incline_row",
+          "cable_rope_rear_delt_rows",
+          "dips_triceps_version",
+          "ab_crunch_machine"
+        ]
+      ]
+    },
+    {
+      "profile_id": "novice-5day-ppl-conditioning",
+      "repetition": 3,
+      "mode": "adaptive",
+      "elapsed_ms": 132433,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 34116,
+      "attempts": [
+        {
+          "elapsed_ms": 132431,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2742,
+          "completion_tokens": 31374,
+          "total_tokens": 34116
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_incline_bench_press_medium_grip",
+          "cable_shoulder_press",
+          "dips_triceps_version"
+        ],
+        [
+          "bent_over_barbell_row",
+          "close_grip_front_lat_pulldown",
+          "kneeling_high_pulley_row",
+          "barbell_curl"
+        ],
+        [
+          "barbell_squat",
+          "barbell_hip_thrust",
+          "glute_ham_raise",
+          "standing_barbell_calf_raise"
+        ],
+        [
+          "leverage_shoulder_press",
+          "close_grip_dumbbell_press",
+          "cable_rope_rear_delt_rows",
+          "high_cable_curls"
+        ],
+        [
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "pull_through",
+          "standing_calf_raises"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_incline_bench_press_medium_grip",
+          "cable_shoulder_press",
+          "dips_triceps_version"
+        ],
+        [
+          "bent_over_barbell_row",
+          "close_grip_front_lat_pulldown",
+          "kneeling_high_pulley_row",
+          "barbell_curl"
+        ],
+        [
+          "barbell_squat",
+          "barbell_hip_thrust",
+          "glute_ham_raise",
+          "standing_barbell_calf_raise"
+        ],
+        [
+          "leverage_shoulder_press",
+          "close_grip_dumbbell_press",
+          "cable_rope_rear_delt_rows",
+          "high_cable_curls"
+        ],
+        [
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "pull_through",
+          "standing_calf_raises"
+        ]
+      ]
+    },
+    {
+      "profile_id": "novice-5day-ppl-conditioning",
+      "repetition": 3,
+      "mode": "disabled",
+      "elapsed_ms": 25727,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4421,
+      "attempts": [
+        {
+          "elapsed_ms": 25724,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2729,
+          "completion_tokens": 1692,
+          "total_tokens": 4421
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_unresolved:day0:leg_curl"
+      ],
+      "quality": {
+        "score": 96,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 0.8,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "barbell_hip_thrust",
+          "dumbbell_lunges",
+          "leg_curl"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_incline_bench_press_medium_grip",
+          "cable_chest_press",
+          "barbell_ab_rollout"
+        ],
+        [
+          "barbell_bent_over_row",
+          "chin_up",
+          "barbell_curl",
+          "vertical_swing"
+        ],
+        [
+          "barbell_squat",
+          "good_morning",
+          "barbell_walking_lunge",
+          "standing_calf_raises"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "dumbbell_incline_row",
+          "cable_shoulder_press",
+          "alternate_hammer_curl"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "barbell_hip_thrust",
+          "dumbbell_lunges"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "barbell_incline_bench_press_medium_grip",
+          "cable_chest_press",
+          "barbell_ab_rollout"
+        ],
+        [
+          "bent_over_barbell_row",
+          "chin_up",
+          "barbell_curl",
+          "vertical_swing"
+        ],
+        [
+          "barbell_squat",
+          "good_morning",
+          "barbell_walking_lunge",
+          "standing_calf_raises"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "dumbbell_incline_row",
+          "cable_shoulder_press",
+          "alternate_hammer_curl"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-increase",
+      "repetition": 1,
+      "mode": "adaptive",
+      "elapsed_ms": 182715,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 23006,
+      "attempts": [
+        {
+          "elapsed_ms": 182714,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2781,
+          "completion_tokens": 20225,
+          "total_tokens": 23006
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "cable_preacher_curl"
+        ],
+        [
+          "dumbbell_squat",
+          "cable_chest_press",
+          "bent_over_two_dumbbell_row",
+          "cable_rope_rear_delt_rows"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_bench_press_with_neutral_grip",
+          "dumbbell_incline_row",
+          "cable_hammer_curls_rope_attachment"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "cable_preacher_curl"
+        ],
+        [
+          "dumbbell_squat",
+          "cable_chest_press",
+          "bent_over_two_dumbbell_row",
+          "cable_rope_rear_delt_rows"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "dumbbell_bench_press_with_neutral_grip",
+          "dumbbell_incline_row",
+          "cable_hammer_curls_rope_attachment"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-increase",
+      "repetition": 1,
+      "mode": "disabled",
+      "elapsed_ms": 29116,
+      "status": "ok",
+      "llm_calls": 2,
+      "total_tokens": 8017,
+      "attempts": [
+        {
+          "elapsed_ms": 12845,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2768,
+          "completion_tokens": 1098,
+          "total_tokens": 3866
+        },
+        {
+          "elapsed_ms": 16260,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2819,
+          "completion_tokens": 1332,
+          "total_tokens": 4151
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_outside_candidates:day0:seated_cable_rows->seated_cable_rows",
+        "draft_unresolved:day0:dumbbell_tricep_extension",
+        "draft_outside_candidates:day1:barbell_deadlift->barbell_deadlift",
+        "draft_unresolved:day1:dumbbell_overhead_press",
+        "draft_unresolved:day1:dumbbell_bent_over_row",
+        "draft_unresolved:day1:dumbbell_goblet_squat",
+        "draft_outside_candidates:day1:plank->plank",
+        "draft_unresolved:day2:lat_pulldown",
+        "draft_outside_candidates:day2:dumbbell_incline_press->incline_dumbbell_press",
+        "draft_unresolved:day2:dumbbell_curl",
+        "draft_outside_candidates:day2:cable_crunch->cable_crunch"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_cable_rows",
+          "dumbbell_lunges",
+          "dumbbell_tricep_extension"
+        ],
+        [
+          "barbell_deadlift",
+          "dumbbell_overhead_press",
+          "dumbbell_bent_over_row",
+          "dumbbell_goblet_squat",
+          "plank"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "lat_pulldown",
+          "dumbbell_incline_press",
+          "dumbbell_curl",
+          "cable_crunch"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_cable_rows",
+          "dumbbell_lunges"
+        ],
+        [
+          "barbell_deadlift",
+          "plank"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "incline_dumbbell_press",
+          "cable_crunch"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-increase",
+      "repetition": 2,
+      "mode": "adaptive",
+      "elapsed_ms": 96461,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 13094,
+      "attempts": [
+        {
+          "elapsed_ms": 96459,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2781,
+          "completion_tokens": 10313,
+          "total_tokens": 13094
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "dumbbell_lunges",
+          "alternating_cable_shoulder_press",
+          "bent_over_two_dumbbell_row",
+          "ab_crunch_machine"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "cable_chest_press",
+          "kneeling_single_arm_high_pulley_row",
+          "dumbbell_raise"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "dumbbell_lunges",
+          "alternating_cable_shoulder_press",
+          "bent_over_two_dumbbell_row",
+          "ab_crunch_machine"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "cable_chest_press",
+          "kneeling_single_arm_high_pulley_row",
+          "dumbbell_raise"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-increase",
+      "repetition": 2,
+      "mode": "disabled",
+      "elapsed_ms": 37011,
+      "status": "ok",
+      "llm_calls": 2,
+      "total_tokens": 8717,
+      "attempts": [
+        {
+          "elapsed_ms": 14160,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2768,
+          "completion_tokens": 1445,
+          "total_tokens": 4213
+        },
+        {
+          "elapsed_ms": 22850,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 3007,
+          "completion_tokens": 1497,
+          "total_tokens": 4504
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "cable_deadlifts",
+          "dumbbell_incline_row",
+          "dumbbell_seated_one_leg_calf_raise"
+        ],
+        [
+          "dumbbell_bench_press_with_neutral_grip",
+          "vertical_swing",
+          "close_grip_front_lat_pulldown",
+          "dumbbell_lunges",
+          "barbell_curl"
+        ],
+        [
+          "cable_deadlifts",
+          "alternating_cable_shoulder_press",
+          "chin_up",
+          "barbell_hip_thrust",
+          "ab_crunch_machine"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "cable_deadlifts",
+          "dumbbell_incline_row",
+          "dumbbell_seated_one_leg_calf_raise"
+        ],
+        [
+          "dumbbell_bench_press_with_neutral_grip",
+          "vertical_swing",
+          "close_grip_front_lat_pulldown",
+          "dumbbell_lunges",
+          "barbell_curl"
+        ],
+        [
+          "cable_deadlifts",
+          "alternating_cable_shoulder_press",
+          "chin_up",
+          "barbell_hip_thrust",
+          "ab_crunch_machine"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-increase",
+      "repetition": 3,
+      "mode": "adaptive",
+      "elapsed_ms": 165446,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 17521,
+      "attempts": [
+        {
+          "elapsed_ms": 165444,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2781,
+          "completion_tokens": 14740,
+          "total_tokens": 17521
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "cable_shoulder_press",
+          "kneeling_high_pulley_row",
+          "dips_triceps_version"
+        ],
+        [
+          "dumbbell_squat",
+          "barbell_incline_bench_press_medium_grip",
+          "bent_over_two_dumbbell_row",
+          "ab_crunch_machine"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "cable_shoulder_press",
+          "kneeling_high_pulley_row",
+          "dips_triceps_version"
+        ],
+        [
+          "dumbbell_squat",
+          "barbell_incline_bench_press_medium_grip",
+          "bent_over_two_dumbbell_row",
+          "ab_crunch_machine"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-increase",
+      "repetition": 3,
+      "mode": "disabled",
+      "elapsed_ms": 24323,
+      "status": "ok",
+      "llm_calls": 2,
+      "total_tokens": 8300,
+      "attempts": [
+        {
+          "elapsed_ms": 15192,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2768,
+          "completion_tokens": 1366,
+          "total_tokens": 4134
+        },
+        {
+          "elapsed_ms": 9126,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2956,
+          "completion_tokens": 1210,
+          "total_tokens": 4166
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_outside_candidates:day0:seated_cable_rows->seated_cable_rows",
+        "draft_unresolved:day1:lat_pulldown",
+        "draft_outside_candidates:day1:leg_press->leg_press",
+        "draft_outside_candidates:day2:barbell_deadlift->barbell_deadlift",
+        "draft_outside_candidates:day2:seated_dumbbell_press->seated_dumbbell_press",
+        "draft_unresolved:day2:cable_row"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_cable_rows",
+          "dumbbell_lunges",
+          "ab_crunch_machine"
+        ],
+        [
+          "dumbbell_bench_press_with_neutral_grip",
+          "lat_pulldown",
+          "leg_press",
+          "cable_chest_press",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "barbell_deadlift",
+          "seated_dumbbell_press",
+          "glute_ham_raise",
+          "cable_row",
+          "barbell_curl"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_cable_rows",
+          "dumbbell_lunges",
+          "ab_crunch_machine"
+        ],
+        [
+          "dumbbell_bench_press_with_neutral_grip",
+          "leg_press",
+          "cable_chest_press",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "barbell_deadlift",
+          "seated_dumbbell_press",
+          "glute_ham_raise",
+          "barbell_curl"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-missed",
+      "repetition": 1,
+      "mode": "adaptive",
+      "elapsed_ms": 47981,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 15141,
+      "attempts": [
+        {
+          "elapsed_ms": 47980,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2781,
+          "completion_tokens": 12360,
+          "total_tokens": 15141
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "pull_through",
+          "leverage_shoulder_press",
+          "close_grip_front_lat_pulldown",
+          "ab_crunch_machine"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "decline_dumbbell_bench_press",
+          "dumbbell_incline_row",
+          "standing_calf_raises"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "pull_through",
+          "leverage_shoulder_press",
+          "close_grip_front_lat_pulldown",
+          "ab_crunch_machine"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "decline_dumbbell_bench_press",
+          "dumbbell_incline_row",
+          "standing_calf_raises"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-missed",
+      "repetition": 1,
+      "mode": "disabled",
+      "elapsed_ms": 20840,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3802,
+      "attempts": [
+        {
+          "elapsed_ms": 20839,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2768,
+          "completion_tokens": 1034,
+          "total_tokens": 3802
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "leg_lift"
+        ],
+        [
+          "dumbbell_bench_press",
+          "dumbbell_incline_row",
+          "dumbbell_seated_one_leg_calf_raise",
+          "barbell_curl"
+        ],
+        [
+          "pull_through",
+          "chin_up",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_lunges",
+          "stiff_legged_dumbbell_deadlift",
+          "leg_lift"
+        ],
+        [
+          "dumbbell_bench_press",
+          "dumbbell_incline_row",
+          "dumbbell_seated_one_leg_calf_raise",
+          "barbell_curl"
+        ],
+        [
+          "pull_through",
+          "chin_up",
+          "bent_over_two_dumbbell_row",
+          "cable_hammer_curls_rope_attachment"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-missed",
+      "repetition": 2,
+      "mode": "adaptive",
+      "elapsed_ms": 220460,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 24049,
+      "attempts": [
+        {
+          "elapsed_ms": 220459,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2781,
+          "completion_tokens": 21268,
+          "total_tokens": 24049
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "cable_deadlifts"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "leverage_shoulder_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_squat"
+        ],
+        [
+          "dumbbell_lunges",
+          "cable_shoulder_press",
+          "kneeling_single_arm_high_pulley_row",
+          "pull_through"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "cable_deadlifts"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "leverage_shoulder_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_squat"
+        ],
+        [
+          "dumbbell_lunges",
+          "cable_shoulder_press",
+          "kneeling_single_arm_high_pulley_row",
+          "pull_through"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-missed",
+      "repetition": 2,
+      "mode": "disabled",
+      "elapsed_ms": 7764,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 3916,
+      "attempts": [
+        {
+          "elapsed_ms": 7759,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2768,
+          "completion_tokens": 1148,
+          "total_tokens": 3916
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_outside_candidates:day0:seated_cable_rows->seated_cable_rows",
+        "draft_unresolved:day1:lat_pulldown",
+        "draft_outside_candidates:day1:dumbbell_shoulder_press->dumbbell_shoulder_press",
+        "draft_outside_candidates:day2:romanian_deadlift->romanian_deadlift",
+        "draft_outside_candidates:day2:incline_dumbbell_press->incline_dumbbell_press",
+        "draft_unresolved:day2:cable_row",
+        "draft_outside_candidates:day2:leg_press->leg_press"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_cable_rows",
+          "dumbbell_lunges"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "lat_pulldown",
+          "dumbbell_shoulder_press",
+          "cable_rope_rear_delt_rows"
+        ],
+        [
+          "romanian_deadlift",
+          "incline_dumbbell_press",
+          "cable_row",
+          "leg_press"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_cable_rows",
+          "dumbbell_lunges"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "dumbbell_shoulder_press",
+          "cable_rope_rear_delt_rows"
+        ],
+        [
+          "romanian_deadlift",
+          "incline_dumbbell_press",
+          "leg_press"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-missed",
+      "repetition": 3,
+      "mode": "adaptive",
+      "elapsed_ms": 64242,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 9889,
+      "attempts": [
+        {
+          "elapsed_ms": 64240,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2781,
+          "completion_tokens": 7108,
+          "total_tokens": 9889
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_lunges"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "alternating_cable_shoulder_press",
+          "close_grip_front_lat_pulldown",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "barbell_hip_thrust",
+          "cable_chest_press",
+          "kneeling_high_pulley_row",
+          "ab_crunch_machine"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_lunges"
+        ],
+        [
+          "stiff_legged_dumbbell_deadlift",
+          "alternating_cable_shoulder_press",
+          "close_grip_front_lat_pulldown",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "barbell_hip_thrust",
+          "cable_chest_press",
+          "kneeling_high_pulley_row",
+          "ab_crunch_machine"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-missed",
+      "repetition": 3,
+      "mode": "disabled",
+      "elapsed_ms": 13349,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4043,
+      "attempts": [
+        {
+          "elapsed_ms": 13348,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2768,
+          "completion_tokens": 1275,
+          "total_tokens": 4043
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_calf_raise",
+          "ab_crunch_machine"
+        ],
+        [
+          "dumbbell_clean",
+          "bent_over_two_dumbbell_row",
+          "kneeling_single_arm_high_pulley_row",
+          "alternating_cable_shoulder_press",
+          "barbell_curl"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "dumbbell_lunges",
+          "close_grip_dumbbell_press",
+          "cable_chest_press",
+          "flutter_kicks"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_calf_raise",
+          "ab_crunch_machine"
+        ],
+        [
+          "dumbbell_clean",
+          "bent_over_two_dumbbell_row",
+          "kneeling_single_arm_high_pulley_row",
+          "alternating_cable_shoulder_press",
+          "barbell_curl"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "dumbbell_lunges",
+          "close_grip_dumbbell_press",
+          "cable_chest_press",
+          "flutter_kicks"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-pain",
+      "repetition": 1,
+      "mode": "adaptive",
+      "elapsed_ms": 48665,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 13591,
+      "attempts": [
+        {
+          "elapsed_ms": 48664,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2781,
+          "completion_tokens": 10810,
+          "total_tokens": 13591
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "ab_crunch_machine"
+        ],
+        [
+          "leverage_shoulder_press",
+          "close_grip_front_lat_pulldown",
+          "smith_machine_stiff_legged_deadlift",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "dumbbell_incline_row",
+          "cable_chest_press",
+          "dumbbell_lunges",
+          "dip_machine"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "ab_crunch_machine"
+        ],
+        [
+          "leverage_shoulder_press",
+          "close_grip_front_lat_pulldown",
+          "smith_machine_stiff_legged_deadlift",
+          "cable_hammer_curls_rope_attachment"
+        ],
+        [
+          "dumbbell_incline_row",
+          "cable_chest_press",
+          "dumbbell_lunges",
+          "dip_machine"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-pain",
+      "repetition": 1,
+      "mode": "disabled",
+      "elapsed_ms": 6991,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4084,
+      "attempts": [
+        {
+          "elapsed_ms": 6984,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2768,
+          "completion_tokens": 1316,
+          "total_tokens": 4084
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_unresolved:day1:cable_lat_pulldown",
+        "draft_outside_candidates:day1:dumbbell_incline_press->incline_dumbbell_press",
+        "draft_unresolved:day1:alternating_dumbbell_curl",
+        "draft_outside_candidates:day2:romanian_deadlift->romanian_deadlift",
+        "draft_outside_candidates:day2:seated_cable_row->seated_cable_rows",
+        "draft_outside_candidates:day2:dumbbell_shoulder_press->dumbbell_shoulder_press",
+        "draft_unresolved:day2:leg_curl_machine"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_lunges"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "cable_lat_pulldown",
+          "dumbbell_incline_press",
+          "alternating_dumbbell_curl"
+        ],
+        [
+          "romanian_deadlift",
+          "seated_cable_row",
+          "dumbbell_shoulder_press",
+          "leg_curl_machine",
+          "ab_crunch_machine"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "bent_over_two_dumbbell_row",
+          "dumbbell_lunges"
+        ],
+        [
+          "barbell_bench_press_medium_grip",
+          "incline_dumbbell_press"
+        ],
+        [
+          "romanian_deadlift",
+          "seated_cable_rows",
+          "dumbbell_shoulder_press",
+          "ab_crunch_machine"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-pain",
+      "repetition": 2,
+      "mode": "adaptive",
+      "elapsed_ms": 87317,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 20847,
+      "attempts": [
+        {
+          "elapsed_ms": 87315,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2781,
+          "completion_tokens": 18066,
+          "total_tokens": 20847
+        }
+      ],
+      "hard_pass": true,
+      "hard_violations": [],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "kneeling_high_pulley_row"
+        ],
+        [
+          "smith_machine_stiff_legged_deadlift",
+          "leverage_shoulder_press",
+          "dumbbell_incline_row",
+          "glute_ham_raise"
+        ],
+        [
+          "dumbbell_lunges",
+          "cable_chest_press",
+          "kneeling_single_arm_high_pulley_row",
+          "pull_through"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "kneeling_high_pulley_row"
+        ],
+        [
+          "smith_machine_stiff_legged_deadlift",
+          "leverage_shoulder_press",
+          "dumbbell_incline_row",
+          "glute_ham_raise"
+        ],
+        [
+          "dumbbell_lunges",
+          "cable_chest_press",
+          "kneeling_single_arm_high_pulley_row",
+          "pull_through"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-pain",
+      "repetition": 2,
+      "mode": "disabled",
+      "elapsed_ms": 11022,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4016,
+      "attempts": [
+        {
+          "elapsed_ms": 11015,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2768,
+          "completion_tokens": 1248,
+          "total_tokens": 4016
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_unresolved:day0:seated_row",
+        "draft_unresolved:day0:dumbbell_curl",
+        "draft_outside_candidates:day1:romanian_deadlift->romanian_deadlift",
+        "draft_unresolved:day1:dumbbell_press",
+        "draft_outside_candidates:day1:leg_press->leg_press",
+        "draft_outside_candidates:day1:cable_tricep_pushdown->triceps_pushdown",
+        "draft_unresolved:day2:lat_pulldown",
+        "draft_outside_candidates:day2:goblet_squat->goblet_squat",
+        "draft_outside_candidates:day2:incline_dumbbell_press->incline_dumbbell_press",
+        "draft_outside_candidates:day2:plank->plank",
+        "final_equipment:day2:goblet_squat:kettlebells"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "barbell_squat",
+          "seated_row",
+          "dumbbell_curl"
+        ],
+        [
+          "romanian_deadlift",
+          "dumbbell_press",
+          "leg_press",
+          "cable_tricep_pushdown"
+        ],
+        [
+          "lat_pulldown",
+          "goblet_squat",
+          "incline_dumbbell_press",
+          "plank"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_bench_press",
+          "barbell_squat"
+        ],
+        [
+          "romanian_deadlift",
+          "leg_press",
+          "triceps_pushdown"
+        ],
+        [
+          "goblet_squat",
+          "incline_dumbbell_press",
+          "plank"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-pain",
+      "repetition": 3,
+      "mode": "adaptive",
+      "elapsed_ms": 42587,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 11826,
+      "attempts": [
+        {
+          "elapsed_ms": 42584,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2781,
+          "completion_tokens": 9045,
+          "total_tokens": 11826
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_unresolved:day1:incline_dumbbell_bench_press"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "alternating_cable_shoulder_press"
+        ],
+        [
+          "cable_deadlifts",
+          "incline_dumbbell_bench_press",
+          "kneeling_single_arm_high_pulley_row",
+          "alternate_incline_dumbbell_curl"
+        ],
+        [
+          "dumbbell_lunges",
+          "dumbbell_bench_press_with_neutral_grip",
+          "bent_over_two_dumbbell_row",
+          "ab_crunch_machine"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "dumbbell_squat",
+          "dumbbell_bench_press",
+          "close_grip_front_lat_pulldown",
+          "alternating_cable_shoulder_press"
+        ],
+        [
+          "cable_deadlifts",
+          "kneeling_single_arm_high_pulley_row",
+          "alternate_incline_dumbbell_curl"
+        ],
+        [
+          "dumbbell_lunges",
+          "dumbbell_bench_press_with_neutral_grip",
+          "bent_over_two_dumbbell_row",
+          "ab_crunch_machine"
+        ]
+      ]
+    },
+    {
+      "profile_id": "week2-progression-pain",
+      "repetition": 3,
+      "mode": "disabled",
+      "elapsed_ms": 9871,
+      "status": "ok",
+      "llm_calls": 1,
+      "total_tokens": 4004,
+      "attempts": [
+        {
+          "elapsed_ms": 9859,
+          "model": "MiniMax-M3",
+          "prompt_tokens": 2768,
+          "completion_tokens": 1236,
+          "total_tokens": 4004
+        }
+      ],
+      "hard_pass": false,
+      "hard_violations": [
+        "draft_unresolved:day0:seated_row_machine",
+        "draft_outside_candidates:day1:romanian_deadlift->romanian_deadlift",
+        "draft_unresolved:day1:lat_pulldown",
+        "draft_outside_candidates:day1:dumbbell_shoulder_press->dumbbell_shoulder_press",
+        "draft_unresolved:day1:leg_curl",
+        "draft_outside_candidates:day2:goblet_squat->goblet_squat",
+        "draft_unresolved:day2:push_up",
+        "draft_outside_candidates:day2:seated_cable_row->seated_cable_rows",
+        "draft_unresolved:day2:dumbbell_curl",
+        "draft_outside_candidates:day2:triceps_pushdown->triceps_pushdown",
+        "final_equipment:day2:goblet_squat:kettlebells"
+      ],
+      "quality": {
+        "score": 100,
+        "session_count_pass_rate": 1,
+        "role_order_pass_rate": 1,
+        "mechanic_order_pass_rate": 1,
+        "unique_exercise_pass_rate": 1,
+        "beginner_barbell_pass_rate": 1
+      },
+      "draft_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "seated_row_machine",
+          "dumbbell_lateral_raise",
+          "seated_calf_raise"
+        ],
+        [
+          "romanian_deadlift",
+          "lat_pulldown",
+          "dumbbell_shoulder_press",
+          "cable_chest_press",
+          "leg_curl"
+        ],
+        [
+          "goblet_squat",
+          "push_up",
+          "seated_cable_row",
+          "dumbbell_curl",
+          "triceps_pushdown"
+        ]
+      ],
+      "final_exercise_ids": [
+        [
+          "barbell_squat",
+          "dumbbell_bench_press",
+          "dumbbell_raise",
+          "seated_calf_raise"
+        ],
+        [
+          "romanian_deadlift",
+          "dumbbell_shoulder_press",
+          "cable_chest_press"
+        ],
+        [
+          "goblet_squat",
+          "seated_cable_rows",
+          "triceps_pushdown"
+        ]
+      ]
+    }
+  ]
+}
